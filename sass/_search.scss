@@ -1,0 +1,36 @@
+.taxonomy-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.taxonomy-single {
+    width: 30%;
+    height: 40vh;
+    @media only screen and (max-width: 800px) {
+        width: 100%;
+      }
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    &__text-container {
+        margin-top: 0.5rem;
+    }
+}
+
+.taxonomy-single__text-container {
+    a {
+        color: $black;
+        &:hover {
+            color: $tan;
+            transition: 300ms;
+        }
+    }
+}
+
+.tax-header{
+    margin-top: 9rem;
+}

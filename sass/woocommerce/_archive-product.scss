@@ -1,0 +1,41 @@
+.all-products-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-single {
+    width: 23%;
+    height: auto;
+    @media only screen and (max-width: 1024px) {
+        width: 30%
+     }
+    a {
+        color: $black !important;
+    }
+    @media only screen and (max-width: 800px) {
+        width: 100%;
+        margin: 1rem 0;
+     }
+    &__title {
+        margin-top: 0.2rem;
+        margin-bottom: 0.5rem;
+        &:hover {
+          color: $tan;
+          transition: 300ms;
+          cursor: pointer;
+        }
+    }
+    img {
+        height: 50vh;
+        object-fit: cover;
+        &:hover {
+            opacity: 0.7;
+            transition: 300ms;
+            cursor: pointer;
+        }
+    }
+    &__price {
+        
+    }
+}

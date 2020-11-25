@@ -1,0 +1,51 @@
+.category-product-header {
+     background-size: cover;
+     width: 100vw;
+     left: calc(50% - 50vw);
+     position: relative;
+     height: 70vh;
+     background-position: center center;
+     &__title {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, 50%);
+         color: $white;
+         font-weight: 700;
+         font-size: 3rem;
+     }
+     &__link {
+         color: $white;
+         position: absolute;
+         top: 70%;
+         left: 50%;
+         transform: translate(-50%, 50%);
+         &:hover {
+             border-bottom: 1px solid $white;
+             transition: 300ms;
+         }
+     }
+}
+
+.product-cat-title {
+    margin-top: 1.5rem;
+    font-size: 2.7rem;
+    position: relative;
+    padding-top: 0.8rem;
+    font-family: $josefin;
+    font-weight: 500;
+   &::before {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: '';
+    background-color: $tan;
+    width: 100px;
+    height: 1.8px;
+    display: block;
+   }
+}
+
+.tax-product_cat main {
+    margin-top: 4rem;
+}

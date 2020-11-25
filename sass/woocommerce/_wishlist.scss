@@ -1,0 +1,66 @@
+.tinv-wishlist table td, .tinv-wishlist table th {
+    font-family: $archivo !important;
+    text-align: left;
+}
+
+.wishlist_item {
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid rgba($gray, 0.6);
+}
+
+.tinv-wishlist table  {
+    .product-thumbnail img {
+        width: 200px;
+        height: 150px;
+        max-width: unset;
+        object-fit: cover;
+    }
+}
+
+.wishlist_item .product-name a {
+    color: $black;
+    &:hover {
+        color: $tan;
+        transition: 300ms;
+        cursor: pointer;
+    }
+}
+
+.tinv-wishlist .product-action {
+    width: unset;
+}
+
+.product-action button {
+    background-color: $black !important;
+    border-radius: 0 !important;
+    &:hover {
+        color: $tan !important;
+        background-color: $black !important;
+        transition: 300ms;
+        cursor: pointer;
+    }
+}
+
+.tinv-wishlist .cart-empty {
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.tinv-wishlist .return-to-shop {
+    text-align: center;
+    .wc-backward {
+        background-color: $black;
+        color: $white;
+        border-radius: 0 !important;
+        &:hover {
+            color: $tan !important;
+            background-color: $black !important;
+            transition: 300ms;
+            cursor: pointer;
+        }
+    }
+}
+
+.tinv-header {
+    margin-top: 9.2rem;
+}

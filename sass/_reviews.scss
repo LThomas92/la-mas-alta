@@ -1,0 +1,64 @@
+.reviews-section__single {
+    display: flex;
+    margin: 2rem 0;
+    img {
+        border-radius: 50%;
+    }
+    figure {
+    
+    }
+    &:nth-child(even) {
+        margin-left: 2rem;
+        padding: 1rem;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+    &__author {
+        text-align: right;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+    &__comment {
+        position: relative;
+        &::before {
+            background-image: url('../img/quote.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -15px;
+            left: -17px;
+            background-size: 10px 20px;
+            content: '';
+            width: 20px;
+            height: 20px;
+        }
+        &::after{
+            background-image: url('../img/quote.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: -4px;
+            right: -17px;
+            background-size: 10px 20px;
+            content: '';
+            width: 20px;
+            height: 20px;
+            transform: scale(-1, -1);
+        }
+    }
+}
+
+.reviews-homepage-section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-homepage-section {
+    margin-top: 2rem;
+    &__title {
+        margin-top: 8rem;
+        text-align: center;
+    }
+}

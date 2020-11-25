@@ -1,0 +1,41 @@
+.error-404 {
+    margin-top: 8.5rem;
+    &__title {
+        margin-bottom: 2rem;
+    }
+    .header-search-form {
+        margin: 0;
+        margin-bottom: 2.5rem;
+        &::after {
+            background-color: rgba($tan, 0.4);
+            width: 100%;
+            height: 1.5px;
+            content: '';
+
+        }
+    }
+    &__links {
+        margin: 2rem 0;
+        ul {
+            list-style: none;
+            display: flex;
+           justify-content: center;
+           @media only screen and (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+            }
+             a {
+                 color: $black;
+                 margin-right: 1.2rem;
+                 @media only screen and (max-width: 800px) {
+                   font-size: 1.3rem;
+                    }
+                 &:hover {
+                     color: $tan;
+                     transition: 300ms;
+                     cursor: pointer;
+                 }
+             }
+        }
+    }
+}

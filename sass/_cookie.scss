@@ -1,0 +1,7 @@
+.cli-style-v2.cli-bar-container, .cli-privacy-content-text, .cli-privacy-overview, .cli-necessary-caption, .cli-switch input:checked + .cli-slider:after {
+    font-family: $archivo;
+}
+
+.cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
+    background-color: $green;
+}

@@ -1,0 +1,17 @@
+.page-contact-us {
+    margin-top: 5rem;
+    #gform_submit_button_1 {
+        background-color: $tan;
+        color: $white;
+        padding: 0.5rem 0.8rem;
+        border: none;
+        width: 50%;
+        cursor: pointer;
+    }
+    input[type="text"], textarea {
+        border: 1px solid $tan;
+    }
+    .gform_footer {
+        text-align: center;
+    }
+}

@@ -1,0 +1,179 @@
+.woocommerce-account .woocommerce-MyAccount-content {
+    float: unset !important;
+    width: unset !important;
+}
+
+.woocommerce-MyAccount-navigation {
+    list-style: none;
+    float: unset !important;
+    width: unset !important;
+}
+
+.dashboard-open {
+    height: 1.2rem !important;
+    display: block;
+    cursor: pointer;
+    margin: 1rem 2rem;
+}
+
+.dashboard-close {
+    height: 1.2rem !important;
+    cursor: pointer;
+    display: none;
+   margin: 1rem 2rem;
+}
+
+.dashboard-container{
+    display: flex;
+    padding: 0 2rem;
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+     }
+    &__nav {
+        text-align: center;
+        background-color: $black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 35%;
+        padding: 1.5rem;
+        position: relative;
+        top: 0;
+        left: -50%;
+        display: none;
+        -webkit-animation: slide 0.7s forwards;
+        -webkit-animation-delay: 0.7s;
+        animation: slide 0.7s forwards;
+        &__name {
+            color: $white;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: none; 
+            display: flex;
+            flex-direction: column;
+            li {
+                padding: 0.3rem 0;
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $tan;
+                        transition: 300ms;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//your reviews
+.your-orders-container {
+   margin-bottom: 2rem;
+}
+
+.dashboard-orders-reviews-container {
+    flex: 1;
+    background-color: $tan;
+    padding: 2rem;
+    .your-orders-container {
+        &__title {
+            color: $white;
+            padding-bottom: 0.9rem;
+            &::after {
+                content: '';
+                background-color: rgba($gray, 0.2);
+                width: 100%;
+                height: 2px;
+                display: block;
+                margin-top: 0.5rem;
+            }
+        }
+    
+            }
+        }
+
+       
+
+
+    .Table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 15px;
+        width: 100%;
+        @media only screen and (max-width: 800px) {
+            border-spacing: 5px;
+         }
+    }
+
+    .Title {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .Heading {
+        display: table-row;
+        font-weight: bold;
+        text-align: left;
+        p {
+            color: $white !important;
+            font-weight: 600;
+        }
+    }
+
+    .Row {
+        display: table-row;
+       
+    }
+
+    .Cell {
+        display: table-cell;
+       padding-left: 5px;
+        padding-right: 5px;
+        text-align: left;
+        p {
+            color: $white !important;
+            font-weight: 400;
+            a {
+                color: $white;
+                font-weight: 400;
+                &:hover {
+                    color: $black;
+                    transition: 300ms;
+                }
+            }
+        }
+       
+    }
+
+
+.your-reviews-section {
+    &__title {
+        color: $white;
+        padding-bottom: 0.9rem;
+        &::after {
+            content: '';
+            background-color: rgba($gray, 0.2);
+            width: 100%;
+            height: 2px;
+            display: block;
+            margin-top: 0.5rem;
+        }
+    }
+    &__single {
+        width: 33%;
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+         }
+        h5 {
+            margin-bottom: 0.6rem;
+        }
+    }
+    &__reviews-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
