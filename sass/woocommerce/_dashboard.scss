@@ -30,32 +30,33 @@
         flex-direction: column;
      }
     &__nav {
+        opacity: 0;
+        flex-direction: column;
         text-align: center;
         background-color: $black;
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        flex: 0 0 35%;
         padding: 1.5rem;
         position: relative;
         top: 0;
-        left: -50%;
+        left: 0;
         display: none;
-        -webkit-animation: slide 0.7s forwards;
-        -webkit-animation-delay: 0.7s;
-        animation: slide 0.7s forwards;
+
         &__name {
             color: $white;
             margin-bottom: 1rem;
         }
+
         ul {
             list-style-type: none; 
             display: flex;
             flex-direction: column;
+
             li {
                 padding: 0.3rem 0;
+
                 a {
                     color: $white;
+					
                     &:hover {
                         color: $tan;
                         transition: 300ms;
@@ -74,7 +75,7 @@
 
 .dashboard-orders-reviews-container {
     flex: 1;
-    background-color: $tan;
+    background-color: rgba(222, 201, 167, 0.8);
     padding: 2rem;
     .your-orders-container {
         &__title {
@@ -93,9 +94,7 @@
             }
         }
 
-       
-
-
+    
     .Table {
         display: table;
         border-collapse: separate;
@@ -176,4 +175,14 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+}
+
+.expanded {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-basis: 35%;
 }

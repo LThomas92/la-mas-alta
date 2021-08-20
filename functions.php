@@ -29,7 +29,7 @@ wp_enqueue_script( 'veganease-navigation', get_template_directory_uri() . '/js/n
 }
 add_action( 'wp_enqueue_scripts', 'veganease_scripts' );
 
-//POST THUMBNAIL FUNCTION 
+//POST THUMBNAIL FUNCTION
 add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -97,11 +97,11 @@ function custom_login_css() {
 add_action('login_enqueue_scripts', 'custom_login_css');
 
 
-//POST THUMBNAIL FUNCTION 
+//POST THUMBNAIL FUNCTION
 add_theme_support( 'post-thumbnails , full' ); ?>
 
 
-<?php /** 
+<?php /**
  * Override 'woocommerce_content' function
  */
 
@@ -122,14 +122,14 @@ function woocommerce_content() {
         while ( have_posts() ) : the_post();
 
             // Template depends from category slug
-        
+
             if ( has_term( 'my-cat-slug', 'product_cat' ) ) {
 
-              woocommerce_get_template_part( 'content', 'single-product-dogs' );  
+              woocommerce_get_template_part( 'content', 'single-product-dogs' );
 
             } else {
 
-              woocommerce_get_template_part( 'content', 'single-product' ); 
+              woocommerce_get_template_part( 'content', 'single-product' );
 
             }
 
@@ -188,22 +188,33 @@ function woocommerce_button_proceed_to_checkout() { ?>
    }
 
    // To change add to cart text on single product page
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' );
 function woocommerce_custom_single_add_to_cart_text() {
-    return __( 'Add to Bag', 'woocommerce' ); 
+    return __( 'Add to Bag', 'woocommerce' );
 }
 
-add_filter( 'get_the_archive_title', function ($title) {    
-    if ( is_category() ) {    
-            $title = single_cat_title( '', false );    
-        } elseif ( is_tag() ) {    
-            $title = single_tag_title( '', false );    
-        } elseif ( is_author() ) {    
-            $title = '<span class="vcard">' . get_the_author() . '</span>' ;    
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_author() ) {
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
         } elseif ( is_tax() ) { //for custom post types
             $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
         } elseif (is_post_type_archive()) {
             $title = post_type_archive_title( '', false );
         }
-    return $title;    
+    return $title;
 });
+
+// //Exclude pages from WordPress Search
+// if (!is_admin()) {
+//     function wpb_search_filter($query) {
+//     if ($query->is_search) {
+//     $query->set('post_type', 'page');
+//     }
+//     return $query;
+//     }
+//     add_filter('pre_get_posts','wpb_search_filter');
+//     }

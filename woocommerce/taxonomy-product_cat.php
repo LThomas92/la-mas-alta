@@ -47,7 +47,6 @@ get_header( 'shop' );
 
 <div class="container-margins-small">
 			<h2 class="product-cat-title"><?php echo the_archive_title();?></h2>
-	
 
 <main class="gutenberg-styles all-products-container">
 <?php while ( have_posts() ) : ?>
@@ -55,7 +54,11 @@ get_header( 'shop' );
 			$product = wc_get_product( $post->ID );
 			?>
 		<div class="product-single">
-		<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail(); ?></a>
+		<a href="<?php echo get_permalink();?>">
+		<figure>
+		<?php the_post_thumbnail(); ?>
+		</figure>	
+		</a>
 		<a href="<?php echo get_permalink();?>"><h5 class="product-single__title"><?php echo the_title();?></h5></a>
 		<p class="product-single__price"><?php echo $product->get_price_html();?></p>
 		</div> <!-- PRODUCT SINGLE -->

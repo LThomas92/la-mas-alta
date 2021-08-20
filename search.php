@@ -8,8 +8,7 @@
  */
 
 get_header();
-global $product;
-?>
+$product = wc_get_product( get_the_ID() );?>
 
 	<main id="primary" class="site-main">
     <div class="container-margins">
@@ -24,9 +23,6 @@ global $product;
 				</h1>
 			</header><!-- .page-header -->
 
-		
-
-               
 				<div class="taxonomy-container">
                 <?php
 			/* Start the Loop */
@@ -34,32 +30,26 @@ global $product;
 				the_post(); ?>
 
 				<div class="taxonomy-single">
-					<a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
+					<a href="<?php the_permalink();?>">
+					<?php if(has_post_thumbnail()) {?>
+					<figure>
+					<?php the_post_thumbnail();?>
+					</figure>
+					<?php } else { ?>
+						<figure>
+					    <img src="<?php echo get_template_directory_uri(); ?>/img/no-product-img.jpg" alt=""/>
+					</figure>
+				<?php } ?>
+
+					</a>
 					<div class="taxonomy-single__text-container">
                     <a href="<?php the_permalink();?>"><h4><?php the_title();?></h4></a>
-                    <p class="taxonomy-single__price"><?php echo $product->get_price_html(); ?></p>
-					<ul class="taxonomy-single__tags">
-					<?php $tags = get_the_tags();
-					if ($tags) {
-						foreach( $tags as $tag ) { ?>
-							<li><?php echo $tag->name;?></li>
-							
-					<?php	}
-					} ?>
-
-					</ul>
-
-					<?php if(get_post_type() == "product") { ?>
-						<a class="taxonomy-single__product-btn" href="<?php the_permalink();?>">Shop Now</a>
-					<?php } else if(get_post_type() == 'post') { ?>
-						<a class="taxonomy-single__read-more" href="<?php the_permalink();?>">Read More</a>
-				<?php } ?>
+					<?php if($product) { ?>
+						<p><?php echo $product->get_price_html(); ?></p>
+					<?php } ?>
 
 					</div> <!-- TAX SINGLE TEXT CONTAINER -->
 				</div> <!-- TAX SINGLE -->
-			
-
-			
 
 			<?php endwhile;
 
@@ -67,7 +57,7 @@ global $product;
 
 		else : ?>
 
-		<div>No Results have been found! Try another search term</div>
+		<div>No Results have been found! Try your search again</div>
 
 		<?php endif;
 		?>

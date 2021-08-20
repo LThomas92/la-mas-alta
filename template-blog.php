@@ -26,7 +26,9 @@
     </figure>
     </a>
     <div class="blog-single__text">
+    <a href="<?php echo the_permalink();?>">
     <h1 class="blog-single__title"><?php the_title(); ?></h1>
+    </a>
     <p><?php echo wp_trim_words(get_the_content(), 50);?></p>
     <a class="blog-single__link" href="<?php the_permalink();?>">Read More</a>
     <ul class="blog-share-icons">

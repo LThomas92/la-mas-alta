@@ -8,10 +8,11 @@
 <?php the_content(); ?>
 </div> <!-- page about text -->
 
+<div class="page-about__img-container">
 <figure class="page-about__img">
 <?php the_post_thumbnail();?>
 </figure>
-
+</div> <!-- img container -->
 </div> <!-- page about -->
 </div> <!-- container margins -->
 

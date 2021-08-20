@@ -47,17 +47,11 @@
     }
 }
 
-.shop-cart-title {
-    margin-top: 9.2rem;
-}
-
 .woocommerce-cart-form {
     td {
         font-family: $archivo;
     }
 }
-
-
 
 .product-price, .product-subtotal {
     .woocommerce-Price-amount {
@@ -183,4 +177,6 @@ button[name="update_cart"] {
     }
   }
 
- 
+.shopping-cart-title-items {
+    margin-top: 2rem;
+}

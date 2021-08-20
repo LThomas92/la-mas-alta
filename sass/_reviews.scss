@@ -1,64 +1,101 @@
 .reviews-section__single {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 1.4rem 0;
+  img {
+    border-radius: 50%;
+  }
+  figure {
+    margin-bottom: 1rem;
+  }
+  &__text {
     display: flex;
-    margin: 2rem 0;
-    img {
-        border-radius: 50%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__author {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  &__comment {
+    position: relative;
+    &::before {
+      background-image: url("../img/quote.svg");
+      background-repeat: no-repeat;
+      background-size: 10px 20px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      left: -20px;
+      top: -40px;
     }
-    figure {
-    
+    &::after {
+      background-image: url("../img/quote.svg");
+      background-repeat: no-repeat;
+      background-size: 10px 20px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      transform: scale(-1, -1);
+      display: block;
+      position: absolute;
+      right: -20px;
+      bottom: -40px;
     }
-    &:nth-child(even) {
-        margin-left: 2rem;
-        padding: 1rem;
-    }
-    &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 2rem;
-    }
-    &__author {
-        text-align: right;
-        font-size: 0.9rem;
-        margin-top: 1.5rem;
-    }
-    &__comment {
-        position: relative;
-        &::before {
-            background-image: url('../img/quote.svg');
-            background-repeat: no-repeat;
-            position: absolute;
-            top: -15px;
-            left: -17px;
-            background-size: 10px 20px;
-            content: '';
-            width: 20px;
-            height: 20px;
-        }
-        &::after{
-            background-image: url('../img/quote.svg');
-            background-repeat: no-repeat;
-            position: absolute;
-            bottom: -4px;
-            right: -17px;
-            background-size: 10px 20px;
-            content: '';
-            width: 20px;
-            height: 20px;
-            transform: scale(-1, -1);
-        }
-    }
+  }
 }
 
 .reviews-homepage-section-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews-homepage-section {
-    margin-top: 2rem;
-    &__title {
-        margin-top: 8rem;
-        text-align: center;
-    }
+  margin-top: 2rem;
+  position: relative;
+  &__title {
+    text-align: center;
+  }
+}
+
+.slick-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 10;
+}
+
+.slick-prev {
+  background-image: url("../img/chevron-right.svg");
+  width: 100%;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: block;
+  transform: scale(-1, 1);
+  cursor: pointer;
+}
+
+.slick-next {
+  background-image: url("../img/chevron-right.svg");
+  width: 100%;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: block;
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 .single-product-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;;
     @media only screen and (max-width: 800px) {
        flex-direction: column;
      }
@@ -121,12 +121,16 @@
 .single-post-share-icons {
     display: flex;
     list-style-type: none;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .single-post__share-icon-img {
     margin-right: 0.7rem;
     height: 1.5rem !important;
+    transition: 300ms all ease;
+    &:hover, &:focus {
+        transform: rotate(10deg);
+    }
 }
 
 .commentlist {
@@ -283,4 +287,19 @@
 
 .woocommerce #review_form #respond textarea {
     border: 1px solid $black !important;
+}
+
+.related {
+    .products {
+        li img {
+            transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+            &:hover, &:focus {
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.woocommerce-breadcrumb {
+    margin-top: 1rem !important;
 }

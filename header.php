@@ -15,6 +15,31 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--  Essential META Tags -->
+
+	<meta property="og:title" content="La Mãs Alta | New York">
+	<meta property="og:description" content="Get all of your high quality street wear ranging from hats, beanies & more!
+	Unique styles that make you look good. Black Owned. Check us out now!">
+	<meta property="og:image" content="https://i.imgur.com/5JpBeV2.jpg" />
+	<meta property="og:image:secure_url" content="https://i.imgur.com/5JpBeV2.jpg">
+	<meta property="og:type" content="image/jpg">
+	<meta property="og:image:width" content="300">
+	<meta property="og:image:height" content="300">
+	<meta property="og:url" content="https://lamasalta.com/">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!--  Non-Essential, But Recommended -->
+
+	<meta property="og:site_name" content="La Mãs Alta">
+	<meta name="twitter:image:alt" content="La Mãs Alta Logo">
+
+
+	<!--  Non-Essential, But Required for Analytics -->
+	<meta property="fb:app_id" content="your_app_id" />
+	<meta name="twitter:site" content="@website-username">
+
+	<title>La Mãs Alta | <?php echo get_the_title($post->ID); ?></title>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
@@ -22,20 +47,21 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+  <div class="main-content">
     <section class="main-header">
 	<header id="masthead" class="site-header">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
+
     <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt=""/>
     <!-- las mas alta logo -->
-    <a class="la-mas-logo" href="<?php echo home_url()?>"><img src="" alt="La Mãs Alta Logo"/></a>
+    <a class="la-mas-logo" href="<?php echo home_url()?>"><img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/></a>
        <!-- las mas alta logo -->
 
 
     <!-- la mas alta nav -->
     <div class="header-right-menu">
-    
+
     <?php if ( is_user_logged_in() ) { ?>
   <a style="border:none; margin-right: 0.5rem" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"> <img class="user-icon" src="<?php echo get_template_directory_uri(); ?>/img/user-icon.svg"/></a>
 <?php } else { ?>
@@ -51,7 +77,6 @@
 </a>
 
 <img class="hamburger-menu" src="<?php echo get_template_directory_uri(); ?>/img/hamburger-menu.svg"/>
-
 </div>
           <!-- la mas alta nav -->
           </header><!-- #masthead -->
@@ -70,7 +95,7 @@
     </div> <!-- container margins -->
 </div> <!-- overlay menu -->
 
-				
+
 
     <!-- secondary product nav -->
 
@@ -111,6 +136,3 @@
         </div> <!-- mobile menu overlay -->
 
     </section>
-
-
-

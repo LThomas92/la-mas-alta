@@ -168,12 +168,17 @@ button[type="submit"] {
     object-fit: cover;
 }
     }
+
+
+.page-login_logo {
+    height: 2rem !important;
+}
 </style>
 
 
 <section class="page-login">
 <div class="page-login__form">
-<a href="<?php echo site_url();?>"><img src="" alt="La Mãs Alta Logo"></a>
+<a href="<?php echo site_url();?>"><img class="page-login_logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"></a>
 <p>Welcome, Join Us!</p>
 <?php echo do_shortcode("[theme-my-login]"); ?>
 </div> <!-- page login form -->

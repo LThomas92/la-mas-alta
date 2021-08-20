@@ -34,6 +34,22 @@
     display: block;
     color: $white;
     border-bottom: 1px solid $white;
+    transition: 300ms;
+    &:hover, &:focus {
+        &:after {
+            transform: translateX(4deg);
+        }
+    }
+    &:after {
+        content: '';
+        background-image: url('../img/chevron-right-white.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-left: 5px;
+    }
     @media only screen and (max-width: 800px) {
         top: 40%;
      }
@@ -58,11 +74,31 @@ padding-right: 0.4rem;
 &:last-child {
     padding-right: 0;
 }
-    &__img {
+figure {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: relative;
+        display: block;
         width: 100%;
-        height: 60vh;
-        object-fit: cover;
+        height: 0;
+        padding-bottom: 150%;
     }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+        &:hover , &:focus {
+            transform: scale(1.02);
+        }
+    }
+}
     &__text {
         display: block;
         font-size: 0.8rem;

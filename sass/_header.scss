@@ -1,13 +1,13 @@
 .main-header {
     box-shadow: 0 4px 2px -2px gray;
-    margin-bottom: 2rem;
-    position: fixed;
+    position: sticky;
   top: 0;
   left: 0;
     z-index:1000;
     width: 100%;
-    height: 120px;
+    height: auto;
     background-color: $white;
+    overflow-y: auto;
 }
 
 .site-header {
@@ -53,7 +53,7 @@
                 color: $gray;
                 font-size: 0.8rem;
                 padding-right: 3.5rem;
-              
+
                 &:hover {
                     color: $tan;
                     transition: 300ms;
@@ -100,17 +100,29 @@
 }
 
 .overlay-menu {
-    display: none;
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: white;
-    z-index: 100;
-    transition: all 300ms;
+    z-index: 10;
     overflow: auto;
+    opacity: 0;
+    visibility: hidden;
 }
+
+.show-overlay-menu {
+  transition: opacity 600ms ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.remove-overlay-menu {
+  transition: opacity 600ms ease-out;
+}
+
+
 
 .header-search-form {
     display: flex;
@@ -133,7 +145,7 @@
 
 .search-form {
     width: 100%;
- 
+
 }
 
 .search-field {
@@ -149,8 +161,6 @@
 .close-icon {
     height: 1.2rem;
     cursor: pointer;
-    display: none;
-    z-index: 100;
     margin-top: 1rem;
     margin-left: 1.5rem;
 }
@@ -221,7 +231,7 @@
     align-items: center;
     a {
         font-size: 2.8rem;
-        color: $white; 
+        color: $white;
     }
 }
 }
@@ -238,6 +248,12 @@
 
 .mobile-margins {
     margin: 0 2rem;
+    .close-icon {
+      display: none !important;
+      @media only screen and (max-width: 800px) {
+          display: block;
+       }
+    }
 }
 
 [aria-current="page"] {
@@ -253,5 +269,11 @@
       .login-btn {
           display: block;
           padding: 0.7rem 0;
+      }
+  }
+
+  .la-mas-logo {
+      &__img {
+          height: 2rem !important;
       }
   }
