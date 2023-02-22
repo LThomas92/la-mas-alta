@@ -277,6 +277,8 @@ footer {
 .copyright-text {
   text-align: center;
   color: rgba(78, 78, 78, 0.4); }
+  .copyright-text a {
+    color: #dec9a7; }
 
 .la-mas-logo-footer-container {
   display: flex;
@@ -766,59 +768,28 @@ button[type="submit"]:hover {
 .cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
   background-color: #17D61A; }
 
-.single-slick-container {
-  width: 100vw;
-  position: relative;
-  left: calc(50% - 50vw); }
-  @media only screen and (max-width: 800px) {
-    .single-slick-container {
-      margin-top: 7rem; } }
-  .single-slick-container .single-slick img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; }
-
-.slider-home-title {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  z-index: 100;
-  color: #fff;
-  font-size: 3rem; }
-  @media only screen and (max-width: 800px) {
-    .slider-home-title {
-      font-size: 1.3rem; } }
-
-.slider-home-link {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  z-index: 100;
-  display: block;
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  transition: 300ms; }
-  .slider-home-link:hover:after, .slider-home-link:focus:after {
-    transform: translateX(4deg); }
-  .slider-home-link:after {
-    content: '';
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMS45NCAyNCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTYsMFY2LjQzTDExLjU4LDEyLDYsMTcuNThWMjRMMTgsMTJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNi4wMykiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-left: 5px; }
-  @media only screen and (max-width: 800px) {
-    .slider-home-link {
-      top: 40%; } }
-
 .homepage-category-container {
   display: flex;
+  flex-direction: column;
   margin: 2rem 0; }
-  @media only screen and (max-width: 800px) {
-    .homepage-category-container {
-      flex-direction: column; } }
+  .homepage-category-container__featured-header {
+    display: flex;
+    justify-content: space-between; }
+  .homepage-category-container__column1 {
+    max-width: 33%; }
+    .homepage-category-container__column1 img {
+      width: 100%;
+      object-fit: cover; }
+  .homepage-category-container__column1, .homepage-category-container__column2 {
+    width: 33%;
+    border-right: 4px solid #dec9a7; }
+  .homepage-category-container__column3 {
+    max-width: 33%;
+    display: flex;
+    flex-direction: column; }
+    .homepage-category-container__column3 img {
+      width: 100%;
+      object-fit: cover; }
 
 .homepage-category {
   width: 100%;
@@ -891,12 +862,34 @@ button[type="submit"]:hover {
   @media only screen and (max-width: 800px) {
     .single-product-container {
       flex-direction: column; } }
+  .single-product-container__title {
+    margin-bottom: 1rem;
+    font-size: 2rem; }
   .single-product-container__text-container {
     margin-top: 2rem;
     width: 40%; }
     @media only screen and (max-width: 800px) {
       .single-product-container__text-container {
         width: 100%; } }
+  .single-product-container__image {
+    position: relative;
+    overflow: hidden; }
+    .single-product-container__image::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%; }
+    .single-product-container__image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1); }
   .single-product-container__img-container {
     width: 55%;
     display: flex;
@@ -905,10 +898,6 @@ button[type="submit"]:hover {
     @media only screen and (max-width: 800px) {
       .single-product-container__img-container {
         width: 100%; } }
-    .single-product-container__img-container img {
-      width: 49%;
-      object-fit: cover;
-      margin-top: 0.5rem; }
   .single-product-container__price {
     display: none; }
 
@@ -927,8 +916,9 @@ button[type="submit"]:hover {
 
 .price {
   color: #4e4e4e;
-  font-weight: 400;
-  margin-top: 0.5rem; }
+  font-weight: 600;
+  margin: 0.5rem 0;
+  font-size: 1.5rem; }
 
 .woocommerce-review-link {
   color: #000; }
@@ -1113,6 +1103,25 @@ button[type="submit"]:hover {
 
 .woocommerce-breadcrumb {
   margin-top: 1rem !important; }
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0; }
+  .slick-dots li {
+    margin: 0 0.5rem;
+    cursor: pointer; }
+    .slick-dots li button {
+      display: block;
+      border: none;
+      background: none;
+      outline: none;
+      text-indent: -9999px;
+      width: 1.2rem; }
+
+.woocommerce-Tabs-panel > h2 {
+  display: none; }
 
 .category-product-header {
   background-size: cover;

@@ -36,8 +36,7 @@ global $post;
 
 <div class="container-margins">
 
-<div class="product-content-margins-small">
-	</div>
+<div class="product-content-margins-small"></div>
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); 
 			$product = wc_get_product( $post->ID );
@@ -48,7 +47,9 @@ global $post;
 			<?php if( have_rows('single_product_image_gallery') ):
 			while( have_rows('single_product_image_gallery') ) : the_row();
         $singleProductImg = get_sub_field('single_product_image'); ?>
+		<figure class="single-product-container__image">
 		<img src="<?php echo esc_url($singleProductImg['url']); ?>" alt="<?php echo $singleProductImg['alt']; ?>"/>
+		</figure>
 
     <?php // End loop.
     endwhile;
@@ -61,7 +62,6 @@ endif; ?>
 
 			<div class="single-product-container__text-container">
 			<h3 class="single-product-container__title"><?php the_title();?></h3>
-			<p class="single-product-container__desc"><?php echo get_the_excerpt(); ?></p>
 			<?php do_action('woocommerce_single_product_summary');?>
 			<p class="single-product-container__price"><?php echo $product->get_price_html(); ?></p>
 			<div>

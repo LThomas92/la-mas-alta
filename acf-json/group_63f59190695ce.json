@@ -6,7 +6,6 @@
             "key": "field_63f591905b2cb",
             "label": "Single Product Image Gallery",
             "name": "single_product_image_gallery",
-            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -16,19 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "pagination": 0,
+            "collapsed": "",
             "min": 0,
             "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
+            "layout": "table",
+            "button_label": "Add Image",
             "sub_fields": [
                 {
                     "key": "field_63f591a95b2cc",
                     "label": "Single Product Image",
                     "name": "single_product_image",
-                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -38,6 +34,7 @@
                         "class": "",
                         "id": ""
                     },
+                    "aria-label": "",
                     "return_format": "array",
                     "library": "all",
                     "min_width": "",
@@ -70,6 +67,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1677038117
+    "modified": 1677083262
 }

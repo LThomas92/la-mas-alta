@@ -6,7 +6,6 @@
             "key": "field_63f58f26a5ce8",
             "label": "Category Image Header",
             "name": "category_image_header",
-            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -16,6 +15,7 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "return_format": "url",
             "library": "all",
             "min_width": "",
@@ -45,6 +45,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1677037468
+    "modified": 1677082341
 }
