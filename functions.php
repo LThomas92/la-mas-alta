@@ -21,7 +21,7 @@ wp_enqueue_script('slick-js', "//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.j
 wp_enqueue_script('veganease-styles-js', get_template_directory_uri() . $main->js, ['jquery', 'slick-js'], null, true);
 wp_style_add_data( 'veganease-style', 'rtl', 'replace' );
 
-wp_enqueue_script( 'veganease-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+wp_enqueue_script( 'veganease-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -207,14 +207,3 @@ add_filter( 'get_the_archive_title', function ($title) {
         }
     return $title;
 });
-
-// //Exclude pages from WordPress Search
-// if (!is_admin()) {
-//     function wpb_search_filter($query) {
-//     if ($query->is_search) {
-//     $query->set('post_type', 'page');
-//     }
-//     return $query;
-//     }
-//     add_filter('pre_get_posts','wpb_search_filter');
-//     }

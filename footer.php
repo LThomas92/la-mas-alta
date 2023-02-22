@@ -58,7 +58,7 @@ endif; ?>
     <a target="_blank" href="mailto:lasmasaltany@gmail.com"><img alt="La Mãs Alta Email Icon" class="email-icon" src="<?php echo get_template_directory_uri(); ?>/img/email-icon.svg"/></a>
 	</div> <!-- footer socials -->
 		<p class="copyright-text">Designed by <span><a target="_blank" href="http://www.instagram.com/lawsandcodes">@lawsandcodes</a></span></p>
-    <p class="copyright-text">&copy; Copyright 2021 La Mãs Alta</p>
+    <p class="copyright-text">&copy; Copyright 2023 La Mãs Alta</p>
 
 
 

@@ -2,7 +2,7 @@
 
 <main>
 <div class="container-margins">
-<?php echo do_shortcode('[ti_wishlistsview]')?>
+<?php the_content(); ?>
 </div>
 
 </main>

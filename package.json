@@ -1,5 +1,5 @@
 {
-  "name": "mind-of-a-millennial",
+  "name": "la-mas-alta",
   "version": "1.0.0",
   "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "browser-sync-webpack-plugin": "^2.0.1",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^2.1.2",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "url-loader": "^1.0.1",

@@ -47,8 +47,8 @@ global $post;
 			<div class="single-product-container__img-container">
 			<?php if( have_rows('single_product_image_gallery') ):
 			while( have_rows('single_product_image_gallery') ) : the_row();
-        $singleProductImg = get_sub_field('single_product_images'); ?>
-		<img src="<?php echo esc_url($singleProductImg['url']); ?>" alt="Single Product Image"/>
+        $singleProductImg = get_sub_field('single_product_image'); ?>
+		<img src="<?php echo esc_url($singleProductImg['url']); ?>" alt="<?php echo $singleProductImg['alt']; ?>"/>
 
     <?php // End loop.
     endwhile;

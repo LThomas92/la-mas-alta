@@ -7,6 +7,11 @@
   @media only screen and (max-width: 800px) {
     flex-wrap: wrap;
   }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
   li {
     width: 25%;
     @media only screen and (max-width: 800px) {

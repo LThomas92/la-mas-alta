@@ -226,7 +226,7 @@
   padding: 0.7rem 0; }
 
 .la-mas-logo__img {
-  height: 2rem !important; }
+  height: 2.8rem !important; }
 
 #third-menu {
   list-style: none;
@@ -237,6 +237,10 @@
   @media only screen and (max-width: 800px) {
     #third-menu {
       flex-wrap: wrap; } }
+  #third-menu ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }
   #third-menu li {
     width: 25%; }
     @media only screen and (max-width: 800px) {
@@ -834,7 +838,7 @@ button[type="submit"]:hover {
       display: block;
       width: 100%;
       height: 0;
-      padding-bottom: 150%; }
+      padding-bottom: 100%; }
     .homepage-category figure img {
       display: block;
       width: 100%;
@@ -857,6 +861,15 @@ button[type="submit"]:hover {
       text-decoration: underline;
       text-underline-position: under;
       transition: 300ms; }
+
+.homepage-categories {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+  margin-top: 4rem; }
+  .homepage-categories li {
+    flex-basis: 30%; }
 
 .page-contact-us {
   margin-top: 5rem; }
@@ -894,7 +907,6 @@ button[type="submit"]:hover {
         width: 100%; } }
     .single-product-container__img-container img {
       width: 49%;
-      height: 40vh;
       object-fit: cover;
       margin-top: 0.5rem; }
   .single-product-container__price {
