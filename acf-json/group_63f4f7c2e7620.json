@@ -3,146 +3,9 @@
     "title": "Pages: Home",
     "fields": [
         {
-            "key": "field_63f6b26f1ff66",
-            "label": "Featured Image Left Side Image 1",
-            "name": "featured_image_left_side_image_1",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_63f6b2de1ff67",
-            "label": "Featured Image Left Side Image 2",
-            "name": "featured_image_left_side_image_2",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_63f6b32319c2b",
-            "label": "Featured Image Right Side Image 1",
-            "name": "featured_image_right_side_image_1",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_63f6b34d19c2c",
-            "label": "Featured Image Right Side Image 2",
-            "name": "featured_image_right_side_image_2",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_63f68a182a33a",
-            "label": "Featured Image Text",
-            "name": "featured_image_text",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_63f68a26efab7",
-            "label": "Featured Text CTA",
-            "name": "featured_text_cta",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_63f4f7c3ffca2",
             "label": "Categories",
             "name": "categories",
-            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -152,6 +15,7 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "layout": "table",
             "pagination": 0,
             "min": 0,
@@ -164,7 +28,6 @@
                     "key": "field_63f4f80dffca3",
                     "label": "Category Image",
                     "name": "category_image",
-                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -174,6 +37,7 @@
                         "class": "",
                         "id": ""
                     },
+                    "aria-label": "",
                     "return_format": "array",
                     "library": "all",
                     "min_width": "",
@@ -190,7 +54,6 @@
                     "key": "field_63f4f868ffca4",
                     "label": "Category Link",
                     "name": "category_link",
-                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -200,8 +63,69 @@
                         "class": "",
                         "id": ""
                     },
+                    "aria-label": "",
                     "return_format": "array",
                     "parent_repeater": "field_63f4f7c3ffca2"
+                }
+            ]
+        },
+        {
+            "key": "field_63f7877fad20e",
+            "label": "Featured Header Images",
+            "name": "featured_header_images",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 2,
+            "layout": "table",
+            "button_label": "Add Image",
+            "sub_fields": [
+                {
+                    "key": "field_63f78808ad20f",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_63f78eabad210",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -211,7 +135,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "29"
+                "value": "14"
             }
         ]
     ],
@@ -223,6 +147,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1677112514
+    "modified": 1677168321
 }

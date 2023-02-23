@@ -1,36 +1,33 @@
 <?php get_header(); ?>
 
+<div class="c-banner">
+  <?php echo get_field('banner_text', 'option'); ?>
+</div>
+
 		<div class="container-margins">
 
-	<section class="homepage-category-container gutenberg-styles">
-    <?php 
-      $featuredImageLeftOne = get_field('featured_image_left_side_image_1');
-      $featuredImageLeftTwo = get_field('featured_image_left_side_image_2');
-      $featuredImageRightOne = get_field('featured_image_right_side_image_1');
-      $featuredImageRightTwo = get_field('featured_image_right_side_image_2');
-    ?>
+	<section class="homepage-category-container">
+    <div class="homepage-category-container__featured-header">
+    <?php if( have_rows('featured_header_images') ): ?>
 
-    <div class="homepage-category-container__featured-header">    
-      <div class="homepage-category-container__column1">
-        <figure class="">
-        <img src="<?php echo $featuredImageLeftOne['url']; ?>" alt="<?php echo $featuredImageLeftOne['alt']; ?>">
-        </figure>
-        <figure class="">
-        <img src="<?php echo $featuredImageLeftTwo['url']; ?>" alt="<?php echo $featuredImageLeftTwo['alt']; ?>">
-        </figure>
-      </div>
-      <div class="homepage-category-container__column2">
-        <?php echo $featuredImageText; ?>
-      </div>
-      <div class="homepage-category-container__column3">
-          <div class="homepage-category-container__small-img">
-          <img src="<?php echo $featuredRightOne['url']; ?>" alt="<?php echo $featuredImageRightOne['alt']; ?>">
-          </div>
-          <div class="homepage-category-container__small-img">
-          <img src="<?php echo $featuredImageRightTwo['url']; ?>" alt="<?php echo $featuredImageRightTwo['alt']; ?>">
-          </div>
-      </div>
-  </div>
+    <ul class="homepage-category-container__featured-images">
+    <?php while( have_rows('featured_header_images') ) : the_row(); ?>
+
+        <?php $image = get_sub_field('image'); 
+              $link  = get_sub_field('link');
+        ?>
+              <li class="homepage-category-container__featured-image">
+                <a class="homepage-category-container__link" href="<?php echo $link['url']; ?>">
+                  <figure class="homepage-category-container__featured-img">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                  </figure>
+                </a>
+                <p class="homepage-category-container__featured-title"><?php echo $link['title']; ?></p>
+              </li>
+    <?php endwhile;
+endif; ?>
+</ul>
+    </div>
 
   <?php if( have_rows('categories') ): ?>
       <ul class="homepage-categories">
