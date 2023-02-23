@@ -3,25 +3,31 @@
 		<div class="container-margins">
 
 	<section class="homepage-category-container gutenberg-styles">
-
-  <?php $featuredImageMain = get_field('featured_image_main'); 
-          $featuredImageText = get_field('featured_image_text');
-          $featuredImageLeft = get_field('featured_image_left');
-          $featuredImageRight = get_field('featured_image_right');
+    <?php 
+      $featuredImageLeftOne = get_field('featured_image_left_side_image_1');
+      $featuredImageLeftTwo = get_field('featured_image_left_side_image_2');
+      $featuredImageRightOne = get_field('featured_image_right_side_image_1');
+      $featuredImageRightTwo = get_field('featured_image_right_side_image_2');
     ?>
+
     <div class="homepage-category-container__featured-header">    
       <div class="homepage-category-container__column1">
-        <img src="<?php echo $featuredImageMain['url']; ?>" alt="<?php echo $featuredImageMain['alt']; ?>">
+        <figure class="">
+        <img src="<?php echo $featuredImageLeftOne['url']; ?>" alt="<?php echo $featuredImageLeftOne['alt']; ?>">
+        </figure>
+        <figure class="">
+        <img src="<?php echo $featuredImageLeftTwo['url']; ?>" alt="<?php echo $featuredImageLeftTwo['alt']; ?>">
+        </figure>
       </div>
       <div class="homepage-category-container__column2">
         <?php echo $featuredImageText; ?>
       </div>
       <div class="homepage-category-container__column3">
           <div class="homepage-category-container__small-img">
-          <img src="<?php echo $featuredImageLeft['url']; ?>" alt="<?php echo $featuredImageLeft['alt']; ?>">
+          <img src="<?php echo $featuredRightOne['url']; ?>" alt="<?php echo $featuredImageRightOne['alt']; ?>">
           </div>
           <div class="homepage-category-container__small-img">
-          <img src="<?php echo $featuredImageRight['url']; ?>" alt="<?php echo $featuredImageRight['alt']; ?>">
+          <img src="<?php echo $featuredImageRightTwo['url']; ?>" alt="<?php echo $featuredImageRightTwo['alt']; ?>">
           </div>
       </div>
   </div>
