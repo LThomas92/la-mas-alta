@@ -208,7 +208,7 @@
 .mobile-margins {
   margin: 0 2rem; }
   .mobile-margins .close-icon {
-    display: none !important; }
+    display: none; }
     @media only screen and (max-width: 800px) {
       .mobile-margins .close-icon {
         display: block; } }
@@ -227,6 +227,9 @@
 
 .la-mas-logo__img {
   height: 2.8rem !important; }
+  @media only screen and (max-width: 800px) {
+    .la-mas-logo__img {
+      height: 1.8rem !important; } }
 
 #third-menu {
   list-style: none;
@@ -799,7 +802,8 @@ button[type="submit"]:hover {
     @media only screen and (max-width: 800px) {
       .homepage-category-container__featured-header {
         flex-direction: column;
-        margin-bottom: 2.5rem; } }
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem; } }
   .homepage-category-container__featured-images {
     display: flex;
     justify-content: space-between;
@@ -1167,6 +1171,9 @@ button[type="submit"]:hover {
   justify-content: center;
   margin: 0;
   padding: 1rem 0; }
+  @media only screen and (max-width: 800px) {
+    .slick-dots {
+      margin-left: 3rem; } }
   .slick-dots li {
     margin: 0 0.5rem;
     cursor: pointer; }

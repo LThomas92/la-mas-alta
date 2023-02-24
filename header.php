@@ -82,7 +82,7 @@
           </header><!-- #masthead -->
 
 <div class="overlay-menu">
-<img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close.svg" alt=""/>
+<img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close.svg" alt="Close Icon"/>
   <div class="container-margins">
 <div class="header-search-form">
     <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -114,15 +114,13 @@
 
         <div class="mobile-menu-overlay">
         <div class="mobile-margins">
-        <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close.svg" alt=""/>
-        <?php
-        wp_nav_menu(
+        <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close.svg" alt="Close Icon"/>
+        <?php wp_nav_menu(
             array(
                 'theme_location' => 'menu-2',
                 'menu_id'        => 'secondary-menu',
             )
-        );
-        ?>
+        ); ?>
 
         <div class="mobile-second-links">
          <?php if ( is_user_logged_in() ) { ?>

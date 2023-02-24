@@ -327,6 +327,9 @@
     justify-content: center;
     margin: 0;
     padding: 1rem 0;
+    @media only screen and (max-width: 800px) {
+        margin-left: 3rem;
+     }
     li {
         margin: 0 0.5rem;
         cursor: pointer;

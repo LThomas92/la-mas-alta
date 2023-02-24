@@ -121,7 +121,7 @@ $(document).ready(function () {
   });
 
   $(".mobile-menu-overlay .close-icon").click(function () {
-    $(".mobile-menu-overlay").hide();
+    $('.mobile-menu-overlay').hide(300);
   });
 
   $(".hamburger-menu").click(function () {
