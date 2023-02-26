@@ -49,6 +49,29 @@
     &__price {
         display: none;
     }
+    .variations {
+      label {
+        margin-right: 0.5rem;
+        font-family: $archivo;
+        font-size: 1rem;
+        margin-right: 1rem;
+      }
+    }
+    .quantity {
+      margin-top: 0.5rem;
+      &::before {
+        content: 'Quantity';
+        display: inline-block;
+        margin-right: 3rem;
+        font-family: $archivo;
+        width: 10px;
+        height: 10px;
+      }
+    }
+}
+
+.single_variation_wrap {
+  margin-top: 0.5rem;
 }
 
 .product_title, .single-product-container__desc {
@@ -346,4 +369,18 @@
 
 .woocommerce-Tabs-panel > h2 {
     display: none;
+}
+
+.reset_variations {
+  margin-left: 0.5rem;
+}
+
+.sku_wrapper {
+  display: none !important;
+}
+
+.related .products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }

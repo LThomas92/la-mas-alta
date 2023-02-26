@@ -81,10 +81,10 @@ __webpack_require__(2);
 /***/ (function(module, exports) {
 
 var $ = jQuery.noConflict();
-let windowSize = false;
-let windowHeight = $(window).height();
-let gutenbergScrollAnims = false;
-let blockTriggerHeight = $(window).height() * 0.33;
+var windowSize = window.innerWidth;
+var windowHeight = $(window).height();
+var gutenbergScrollAnims = false;
+var blockTriggerHeight = $(window).height() * 0.33;
 
 $(document).ready(function () {
   $(".single-slick-container").slick({

@@ -30,7 +30,7 @@ endif; ?>
     </div>
 
   <?php if( have_rows('categories') ): ?>
-      <ul class="homepage-categories">
+      <ul class="homepage-categories gutenberg-styles">
     <?php while( have_rows('categories') ) : the_row(); ?>
         <?php $catImage = get_sub_field('category_image');
         $catTitle = get_sub_field('category_link'); ?>
