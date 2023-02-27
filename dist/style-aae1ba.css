@@ -978,8 +978,7 @@ button[type="submit"]:hover {
       width: 10px;
       height: 10px; }
   .single-product-container .woocommerce-product-details__short-description {
-    display: none;
-    margin-bottom: 1rem; }
+    display: none; }
 
 .single_variation_wrap {
   margin-top: 0.5rem; }
@@ -1225,19 +1224,6 @@ button[type="submit"]:hover {
 
 select {
   font-family: "Archivo Narrow", sans-serif; }
-
-.read-more-btn {
-  background-color: #dec9a7;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.6rem;
-  font-weight: 600;
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1.2rem; }
 
 .category-product-header {
   background-size: cover;
@@ -1837,4 +1823,4 @@ input:focus {
   position: relative;
   top: 0; }
 
-/*# sourceMappingURL=style.css.map*/
+/*# sourceMappingURL=style-aae1ba.css.map*/
