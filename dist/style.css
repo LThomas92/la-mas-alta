@@ -199,6 +199,30 @@
       display: flex;
       flex-direction: column; } }
 
+.mobile-menu-overlay__utils {
+  display: none; }
+  @media only screen and (max-width: 800px) {
+    .mobile-menu-overlay__utils {
+      display: block; } }
+  @media only screen and (max-width: 800px) {
+    .mobile-menu-overlay__utils .header-search-form {
+      margin-top: 5rem;
+      background-color: transparent; }
+      .mobile-menu-overlay__utils .header-search-form::after {
+        display: none; } }
+  @media only screen and (max-width: 800px) {
+    .mobile-menu-overlay__utils .search-form {
+      margin-top: 0;
+      border: 2px solid #fff;
+      padding-left: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem; } }
+  @media only screen and (max-width: 800px) {
+    .mobile-menu-overlay__utils .search-field {
+      background-color: transparent;
+      color: #000;
+      font-weight: 800; } }
+
 .mobile-second-links {
   display: none; }
   @media only screen and (max-width: 800px) {
@@ -223,6 +247,11 @@
 
 .mobile-margins {
   margin: 0 2rem; }
+  .mobile-margins .la-mas-logo__img {
+    display: none; }
+    @media only screen and (max-width: 800px) {
+      .mobile-margins .la-mas-logo__img {
+        display: block; } }
   .mobile-margins .close-icon {
     display: none; }
     @media only screen and (max-width: 800px) {

@@ -126,17 +126,21 @@
         ); ?>
 
         <div class="mobile-second-links">
-         <?php if ( is_user_logged_in() ) { ?>
-  <a style="border:none; margin-right: 0.5rem" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"> <img class="user-icon" src="<?php echo get_template_directory_uri(); ?>/img/user-icon.svg"/></a>
-<?php } else { ?>
+         <?php if ( !is_user_logged_in() ) { ?>
+        <?php } else { ?>
   <a class="login-btn" style="border:none;" href="<?php echo wp_login_url();?>">Login</a>
 <a class="login-btn" style="border:none" href="<?php echo site_url('/wp-login.php?action=register');?>">Register</a>
 <?php }; ?>
 </div> <!-- mobile second links -->
 
       <div class="mobile-menu-overlay__utils">
-        <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon"/>
-        <a href=""></a>
+      <div class="header-search-form">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+  <label>
+      <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search for something...', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+  </label>
+  <button type="submit" name="submit" value="submit"></button>
+</form>
       </div>
         </div> <!-- mobile margins -->
         </div> <!-- mobile menu overlay -->

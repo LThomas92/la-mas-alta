@@ -234,6 +234,37 @@
     }
 
 }
+&__utils {
+    display: none;
+    @media only screen and (max-width: 800px) {
+        display: block;
+    }
+    .header-search-form {
+        @media only screen and (max-width: 800px) {
+            margin-top: 5rem;
+            background-color: transparent;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .search-form {
+        @media only screen and (max-width: 800px) {
+            margin-top: 0;
+            border: 2px solid $white;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    .search-field {
+        @media only screen and (max-width: 800px) {
+            background-color: transparent;
+            color: $black;
+            font-weight: 800;
+        }
+    }
+}
 }
 
 .mobile-second-links {
@@ -265,6 +296,12 @@
 
 .mobile-margins {
     margin: 0 2rem;
+    .la-mas-logo__img {
+        display: none;
+        @media only screen and (max-width: 800px) {
+            display: block;
+         }
+    }
     .close-icon {
       display: none;
       @media only screen and (max-width: 800px) {
