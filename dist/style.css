@@ -131,6 +131,9 @@
 .search-icon {
   height: 1.2rem;
   cursor: pointer; }
+  @media only screen and (max-width: 800px) {
+    .search-icon {
+      display: none; } }
 
 .close-icon {
   height: 1.2rem;
@@ -153,26 +156,37 @@
     overflow: auto;
     top: 0;
     left: -600px;
-    background-color: #dec9a7;
     -webkit-animation: slide 0.2s forwards;
     -webkit-animation-delay: 0.2s;
-    animation: slide 0.2s forwards; }
+    animation: slide 0.2s forwards;
+    background: rgba(222, 201, 167, 0.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); }
+    .mobile-menu-overlay__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.3rem; }
     .mobile-menu-overlay ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      align-items: center;
       margin-top: 5rem; }
       .mobile-menu-overlay ul li {
         font-size: 2.8rem; }
         .mobile-menu-overlay ul li a {
           color: #fff;
           display: block;
-          padding: 0.7rem 0; }
+          padding: 0.7rem 0;
+          text-shadow: 2px 2px 2px #000000;
+          transition: all 300ms ease-in; }
+          .mobile-menu-overlay ul li a:hover {
+            color: #000; }
     .mobile-menu-overlay .search-form {
       margin-top: 4rem; }
     .mobile-menu-overlay .close-icon {
-      height: 2rem;
+      height: 1.3rem;
       z-index: 10;
       display: block;
       margin-left: auto; } }
@@ -183,19 +197,21 @@
     .mobile-menu-overlay #secondary-menu {
       display: block;
       display: flex;
-      flex-direction: column;
-      align-items: center; } }
+      flex-direction: column; } }
 
 .mobile-second-links {
   display: none; }
   @media only screen and (max-width: 800px) {
     .mobile-second-links {
       display: flex;
-      flex-direction: column;
-      align-items: center; }
+      flex-direction: column; }
       .mobile-second-links a {
         font-size: 2.8rem;
-        color: #fff; } }
+        color: #fff;
+        text-shadow: 2px 2px 2px #000000;
+        transition: all 300ms ease-in; }
+        .mobile-second-links a:hover {
+          color: #000; } }
 
 .hamburger-menu {
   display: none; }
@@ -221,9 +237,22 @@
     [aria-current="page"] {
       color: #fff !important; } }
 
-.mobile-second-links .login-btn {
-  display: block;
-  padding: 0.7rem 0; }
+.mobile-second-links {
+  position: relative;
+  padding-bottom: 2rem; }
+  .mobile-second-links .login-btn {
+    display: block;
+    padding: 0.7rem 0; }
+  .mobile-second-links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-repeat: repeat-x;
+    background-size: 5px 1px;
+    background-image: radial-gradient(circle, #000 0.5px, transparent 0.5px); }
 
 .la-mas-logo__img {
   height: 2.8rem !important; }
@@ -918,6 +947,20 @@ button[type="submit"]:hover {
     border: 1px solid #dec9a7; }
   .page-contact-us .gform_footer {
     text-align: center; }
+
+.c-privacy-policy {
+  padding: 4rem 0; }
+  .c-privacy-policy h2, .c-privacy-policy h3 {
+    margin: 1rem 0; }
+  .c-privacy-policy p {
+    margin: 1rem 0; }
+
+.c-refunds-returns {
+  padding: 2rem 0; }
+  .c-refunds-returns h2, .c-refunds-returns h3 {
+    margin: 1.5rem 0; }
+  .c-refunds-returns p {
+    margin: 1.2rem 0; }
 
 .single-product-container {
   display: flex;

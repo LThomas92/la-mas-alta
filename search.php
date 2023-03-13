@@ -44,9 +44,11 @@ $product = wc_get_product( get_the_ID() );?>
 					</a>
 					<div class="taxonomy-single__text-container">
                     <a href="<?php the_permalink();?>"><h4><?php the_title();?></h4></a>
-					<?php if($product) { ?>
+					<?php if( $product ) { ?>
 						<p><?php echo $product->get_price_html(); ?></p>
-					<?php } ?>
+					<?php } else { ?>
+            <p></p>
+          <?php } ?>
 
 					</div> <!-- TAX SINGLE TEXT CONTAINER -->
 				</div> <!-- TAX SINGLE -->

@@ -154,6 +154,9 @@
 .search-icon {
     height: 1.2rem;
     cursor: pointer;
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
 }
 
 .close-icon {
@@ -180,15 +183,23 @@
     overflow: auto;
     top: 0;
     left: -600px;
-    background-color: $tan;
     -webkit-animation: slide 0.2s forwards;
     -webkit-animation-delay: 0.2s;
     animation: slide 0.2s forwards;
+    background: rgba($tan, 0.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.3rem;
+    }
     ul {
         list-style: none;
         display: flex;
         flex-direction: column;
-        align-items: center;
         margin-top: 5rem;
         li {
             font-size: 2.8rem;
@@ -196,6 +207,11 @@
                 color: $white;
                 display: block;
                 padding: 0.7rem 0;
+                text-shadow: 2px 2px 2px #000000;
+                transition: all 300ms ease-in;
+                &:hover {
+                  color: $black;
+                }
             }
         }
     }
@@ -203,7 +219,7 @@
         margin-top: 4rem;
     }
     .close-icon {
-        height: 2rem;
+        height: 1.3rem;
         z-index: 10;
         display: block;
         margin-left: auto;
@@ -215,7 +231,6 @@
         display: block;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
 }
@@ -226,10 +241,14 @@
     @media only screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
     a {
         font-size: 2.8rem;
         color: $white;
+        text-shadow: 2px 2px 2px #000000;
+        transition: all 300ms ease-in;
+        &:hover {
+          color: $black;
+        }
     }
 }
 }
@@ -268,6 +287,19 @@
           display: block;
           padding: 0.7rem 0;
       }
+     position: relative;
+     padding-bottom: 2rem;
+     &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-repeat: repeat-x;
+      background-size: 5px 1px;
+      background-image: radial-gradient(circle, $black 0.5px, transparent 0.5px);
+     }
   }
 
   .la-mas-logo {

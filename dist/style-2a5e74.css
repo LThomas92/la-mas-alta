@@ -919,6 +919,20 @@ button[type="submit"]:hover {
   .page-contact-us .gform_footer {
     text-align: center; }
 
+.c-privacy-policy {
+  padding: 4rem 0; }
+  .c-privacy-policy h2, .c-privacy-policy h3 {
+    margin: 1rem 0; }
+  .c-privacy-policy p {
+    margin: 1rem 0; }
+
+.c-refunds-returns {
+  padding: 2rem 0; }
+  .c-refunds-returns h2, .c-refunds-returns h3 {
+    margin: 1.5rem 0; }
+  .c-refunds-returns p {
+    margin: 1.2rem 0; }
+
 .single-product-container {
   display: flex;
   justify-content: space-between; }
@@ -977,6 +991,9 @@ button[type="submit"]:hover {
       font-family: "Archivo Narrow", sans-serif;
       width: 10px;
       height: 10px; }
+  .single-product-container .woocommerce-product-details__short-description {
+    display: none;
+    margin-bottom: 1rem; }
 
 .single_variation_wrap {
   margin-top: 0.5rem; }
@@ -1216,6 +1233,25 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem; }
+
+.select2-search--dropdown {
+  display: none !important; }
+
+select {
+  font-family: "Archivo Narrow", sans-serif; }
+
+.read-more-btn {
+  background-color: #dec9a7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-weight: 600;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.2rem; }
 
 .category-product-header {
   background-size: cover;
@@ -1815,4 +1851,4 @@ input:focus {
   position: relative;
   top: 0; }
 
-/*# sourceMappingURL=style-dcdaa6.css.map*/
+/*# sourceMappingURL=style-2a5e74.css.map*/

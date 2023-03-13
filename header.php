@@ -53,7 +53,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-    <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt=""/>
+    <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon"/>
     <!-- las mas alta logo -->
     <a class="la-mas-logo" href="<?php echo home_url()?>"><img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/></a>
        <!-- las mas alta logo -->
@@ -114,7 +114,10 @@
 
         <div class="mobile-menu-overlay">
         <div class="mobile-margins">
+        <div class="mobile-menu-overlay__header">
+        <img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/>
         <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close.svg" alt="Close Icon"/>
+        </div>
         <?php wp_nav_menu(
             array(
                 'theme_location' => 'menu-2',
@@ -130,6 +133,11 @@
 <a class="login-btn" style="border:none" href="<?php echo site_url('/wp-login.php?action=register');?>">Register</a>
 <?php }; ?>
 </div> <!-- mobile second links -->
+
+      <div class="mobile-menu-overlay__utils">
+        <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon"/>
+        <a href=""></a>
+      </div>
         </div> <!-- mobile margins -->
         </div> <!-- mobile menu overlay -->
 
