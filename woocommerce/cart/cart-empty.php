@@ -29,9 +29,9 @@ defined( 'ABSPATH' ) || exit;
 <h3 class="cart-empty-recc-title">Recommended Products</h3>
 <div class="empty-cart-recc-products">
 <?php
-    $args = array(
+    $args = array (
         'post_type'      => 'product',
-        'posts_per_page' => 4,
+        'posts_per_page' => 3,
         'orderby'        => 'rand',
         );
     $loop = new WP_Query( $args );
@@ -40,7 +40,6 @@ defined( 'ABSPATH' ) || exit;
             
     <div class="cart-empty-related-single">
     <a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
-    <a class="cart-empty-related-single__link" href="<?php the_permalink();?>"><?php the_title(); ?></a>
     </div>
 	
     <?php    endwhile;

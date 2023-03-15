@@ -44,7 +44,7 @@ get_header( 'shop' );
 
 </div> <!--category header image -->
 
-<div class="container-margins-small">
+<div class="container-margins">
 			<h2 class="product-cat-title"><?php echo the_archive_title();?></h2>
 	
 

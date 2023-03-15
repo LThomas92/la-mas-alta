@@ -14,8 +14,6 @@ wp_enqueue_style( 'veganease-style', get_template_directory_uri() . $main->css, 
 
 wp_enqueue_script('veganease-js', get_template_directory_uri() . $main->js, ['jquery, slick-js'], null, true);
 wp_enqueue_style( 'slick-style',"//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css");
-// wp_register_script( 'slick', "//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js");
-// wp_enqueue_script("slick");
 wp_enqueue_script('slick-js', "//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js", ['jquery'], null, true);
 
 wp_enqueue_script('veganease-styles-js', get_template_directory_uri() . $main->js, ['jquery', 'slick-js'], null, true);
@@ -84,29 +82,23 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 }
 
 //LOGIN CSS
-
 function custom_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/login/login-styles.css' );
 }
 add_action( 'login_enqueue_scripts', 'custom_login_stylesheet' );
-
 
 function custom_login_css() {
     wp_enqueue_style('login-styles', get_template_directory_uri() . '/login/login-styles.css');
 }
 add_action('login_enqueue_scripts', 'custom_login_css');
 
-
 //POST THUMBNAIL FUNCTION
 add_theme_support( 'post-thumbnails , full' ); ?>
-
-
 <?php /**
  * Override 'woocommerce_content' function
  */
 
 if ( ! function_exists( 'woocommerce_content' ) ) {
-
 /**
  * Output WooCommerce content.
  *
@@ -208,3 +200,9 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 });
 
+function redirect_to_profile() {
+  $who = strtolower(sanitize_user($_POST['log']));
+  $redirect_to = get_option('home');
+  return $redirect_to;
+}
+add_filter('login_redirect', 'redirect_to_profile');

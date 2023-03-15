@@ -1,4 +1,5 @@
 <?php
+ob_start();
 /**
  * The header for our theme
  *
@@ -63,7 +64,7 @@
     <div class="header-right-menu">
 
     <?php if ( is_user_logged_in() ) { ?>
-  <a style="border:none; margin-right: 0.5rem" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"> <img class="user-icon" src="<?php echo get_template_directory_uri(); ?>/img/user-icon.svg"/></a>
+<a class="login-btn" style="border:none;" href="<?php echo wp_logout_url();?>">Logout</a>
 <?php } else { ?>
   <a class="login-btn" style="border:none;" href="<?php echo wp_login_url();?>">Login</a>
 <a class="login-btn" style="border:none" href="<?php echo site_url('/wp-login.php?action=register');?>">Register</a>
@@ -126,7 +127,8 @@
         ); ?>
 
         <div class="mobile-second-links">
-         <?php if ( !is_user_logged_in() ) { ?>
+         <?php if ( is_user_logged_in() ) { ?>
+          <a class="login-btn" style="border:none;" href="<?php echo wp_logout_url();?>">Logout</a>
         <?php } else { ?>
   <a class="login-btn" style="border:none;" href="<?php echo wp_login_url();?>">Login</a>
 <a class="login-btn" style="border:none" href="<?php echo site_url('/wp-login.php?action=register');?>">Register</a>

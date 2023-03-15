@@ -12,7 +12,7 @@
 ?>
 
 </div> <!-- .main content -->
-	<div class="container-margins">
+
 	<footer id="colophon" class="site-footer">
 	<?php
         wp_nav_menu(
@@ -45,8 +45,6 @@ else :
 endif; ?>
 
 
-
-
 		<picture class="la-mas-logo-footer-container">
 				<a href="<?php echo site_url(); ?>">
 		<img class="la-mas-logo-footer" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/>
@@ -60,11 +58,7 @@ endif; ?>
 		<p class="copyright-text">Designed by <span><a target="_blank" href="http://www.instagram.com/lawsandcodes">@lawsandcodes</a></span></p>
     <p class="copyright-text">&copy; Copyright 2023 La Mãs Alta</p>
 
-
-
-
 </div><!-- #page -->
-</div> <!-- container margins -->
 
 <?php wp_footer(); ?>
 
