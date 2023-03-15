@@ -105,3 +105,87 @@ input[type="email"] {
         border-right: none !important;
        }
 }
+
+.woocommerce-checkout {
+    #customer_details {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4.5rem;
+        @media only screen and (max-width: 800px) {
+            flex-direction: column;
+           }
+    }
+    .customer-details--left {
+        width: 60%;
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+           }
+    }
+    .customer-details--right {
+        width: 35%;
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+           }
+    }
+    .woocommerce form .form-row .select2-container {
+        width: 100% !important;
+    }
+    .woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
+        font-family: $archivo;
+    }
+    .woocommerce-shipping-fields {
+        margin-top: 4rem;
+        input[type="text"] {
+            padding: 0.5rem;
+        }
+    }
+    .woocommerce-form-coupon-toggle {
+        margin: 3.5rem auto;
+        width: 50%;
+    }
+    .woocommerce-checkout-payment {
+        background-color: $white !important;
+    }
+    .payment_box {
+        background-color: $white !important;
+        padding: 0 !important;
+        &::before {
+            display: none !important;
+        }
+    }
+    label[for=payment_method] {
+        font-size: 1.3rem !important;
+    }
+}
+
+//Confirmation Page
+.woocommerce-order-received {
+    .woocommerce-order {
+        margin-top: 2.5rem;
+    }
+    .woocommerce-notice  {
+        text-align: center;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    .woocommerce-order-overview {
+        text-align: center;
+        margin: 2.5rem auto !important;
+        width: 50% !important;
+        display: flex !important;
+        @media only screen and (max-width: 800px) {
+            width: 100% !important;
+            flex-direction: column !important;
+           }
+           &::before {
+            @media only screen and (max-width: 800px) {
+                display: none !important;
+            }
+           }
+    }
+    .woocommerce-column__title {
+        @media only screen and (max-width: 800px) {
+             margin-top: 1.5rem;
+           }
+    }
+}

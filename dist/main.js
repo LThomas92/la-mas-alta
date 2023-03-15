@@ -121,7 +121,6 @@ $(document).ready(function () {
 
   $(".search-icon").click(function () {
     $(".overlay-menu").addClass("show-overlay-menu");
-    $(".close-icon").show();
   });
 
   $(".close-icon").click(function () {

@@ -38,7 +38,7 @@ endif; ?>
         <li class="homepage-category">
           <a class="homepage-category__text" href="<?php echo $catTitle['url']; ?>">
           <figure>
-          <img class="homepage-category__img" src="<?php echo $catImage['url']; ?>">
+          <img alt="<?php echo $catImage['alt']; ?>" class="homepage-category__img" src="<?php echo $catImage['url']; ?>">
           </figure>
           <?php echo $catTitle['title']; ?>
           </a>

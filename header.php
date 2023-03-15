@@ -20,7 +20,7 @@ ob_start();
 	<!--  Essential META Tags -->
 
 	<meta property="og:title" content="La Mãs Alta | New York">
-	<meta property="og:description" content="Get all of your high quality street wear ranging from hats, beanies & more!
+	<meta property="og:description" content="Get all of your high quality street wear ranging from t-shirts, hoodies & more!
 	Unique styles that make you look good. Black Owned. Check us out now!">
 	<meta property="og:image" content="https://i.imgur.com/5JpBeV2.jpg" />
 	<meta property="og:image:secure_url" content="https://i.imgur.com/5JpBeV2.jpg">
@@ -34,7 +34,7 @@ ob_start();
 
 	<meta property="og:site_name" content="La Mãs Alta">
 	<meta name="twitter:image:alt" content="La Mãs Alta Logo">
-
+  <meta name="description" content="Get all of your high quality street wear ranging from t-shirts, hoodies & more!
 
 	<!--  Non-Essential, But Required for Analytics -->
 	<meta property="fb:app_id" content="your_app_id" />
@@ -56,7 +56,7 @@ ob_start();
 
     <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search.svg" alt="Search Icon"/>
     <!-- las mas alta logo -->
-    <a class="la-mas-logo" href="<?php echo home_url()?>"><img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/></a>
+    <a class="la-mas-logo" href="<?php echo home_url()?>"><img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.webp" alt="La Mãs Alta Logo"/></a>
        <!-- las mas alta logo -->
 
 
@@ -72,12 +72,12 @@ ob_start();
 
 <a class="heart-icon" href="<?php echo site_url('/wishlist')?>"><img src="<?php echo get_template_directory_uri(); ?>/img/heart-icon.svg" alt="Heart Icon"></a>
 <a style="border:none; position: relative;" href="<?php echo wc_get_cart_url(); ?>">
-  <img class="shopping-bag" src="<?php echo get_template_directory_uri(); ?>/img/shopping-bag.svg"/>
+  <img class="shopping-bag" alt="Shopping Bag" src="<?php echo get_template_directory_uri(); ?>/img/shopping-bag.svg"/>
   <span class="cart_items_num"><?php echo sprintf ( _n( '%d ', '%d ', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
 </span>
 </a>
 
-<img class="hamburger-menu" src="<?php echo get_template_directory_uri(); ?>/img/hamburger-menu.svg"/>
+<img class="hamburger-menu" alt="Hamburger Menu" src="<?php echo get_template_directory_uri(); ?>/img/hamburger-menu.svg"/>
 </div>
           <!-- la mas alta nav -->
           </header><!-- #masthead -->
@@ -95,8 +95,6 @@ ob_start();
     </div> <!-- header search form -->
     </div> <!-- container margins -->
 </div> <!-- overlay menu -->
-
-
 
     <!-- secondary product nav -->
 
@@ -116,7 +114,7 @@ ob_start();
         <div class="mobile-menu-overlay">
         <div class="mobile-margins">
         <div class="mobile-menu-overlay__header">
-        <img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/>
+        <img class="la-mas-logo__img" src="<?php echo get_template_directory_uri(); ?>/img/logo.webp" alt="La Mãs Alta Logo"/>
         <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close.svg" alt="Close Icon"/>
         </div>
         <?php wp_nav_menu(

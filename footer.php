@@ -47,7 +47,7 @@ endif; ?>
 
 		<picture class="la-mas-logo-footer-container">
 				<a href="<?php echo site_url(); ?>">
-		<img class="la-mas-logo-footer" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="La Mãs Alta Logo"/>
+		<img class="la-mas-logo-footer" src="<?php echo get_template_directory_uri(); ?>/img/logo.webp" alt="La Mãs Alta Logo"/>
 	</a>
 	</picture> <!-- la mas logo footer container -->
 
@@ -64,7 +64,7 @@ endif; ?>
 
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
 
