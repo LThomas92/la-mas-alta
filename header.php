@@ -72,7 +72,7 @@ ob_start();
 
 <a class="heart-icon" href="<?php echo site_url('/wishlist')?>"><img src="<?php echo get_template_directory_uri(); ?>/img/heart-icon.svg" alt="Heart Icon"></a>
 <a style="border:none; position: relative;" href="<?php echo wc_get_cart_url(); ?>">
-  <img class="shopping-bag" alt="Shopping Bag" src="<?php echo get_template_directory_uri(); ?>/img/shopping-bag.svg"/>
+  <img class="shopping-bag" alt="Shopping Bag Icon" src="<?php echo get_template_directory_uri(); ?>/img/shopping-bag.svg"/>
   <span class="cart_items_num"><?php echo sprintf ( _n( '%d ', '%d ', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
 </span>
 </a>

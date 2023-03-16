@@ -62,10 +62,9 @@
       color: #dec9a7;
       transition: 300ms; }
 
-.search-field {
-  width: 100%; }
-
 .shopping-bag {
+  max-width: 35px;
+  width: 100%;
   height: 2.2rem !important; }
 
 .cart_items_num {
@@ -131,6 +130,7 @@
   width: 100%; }
 
 .search-field {
+  width: 100%;
   border: 0;
   line-height: 2rem; }
 
@@ -142,15 +142,17 @@
       display: none; } }
 
 .close-icon {
+  max-width: 21px;
+  width: 100%;
   height: 1.2rem;
   cursor: pointer;
   margin-top: 1rem;
   margin-left: 1.5rem; }
 
-.user-icon {
-  height: 1.5rem; }
-
 .heart-icon {
+  max-width: 24px;
+  width: 100%;
+  height: 24px;
   margin: 0 0.9rem; }
 
 @media only screen and (max-width: 800px) {
@@ -249,7 +251,10 @@
     .hamburger-menu {
       display: block;
       cursor: pointer;
-      margin-left: 0.5rem; } }
+      margin-left: 0.5rem;
+      max-width: 24px;
+      width: 100%;
+      height: 24px; } }
 
 .mobile-margins {
   margin: 0 2rem; }
@@ -290,6 +295,8 @@
     background-image: radial-gradient(circle, #000 0.5px, transparent 0.5px); }
 
 .la-mas-logo__img {
+  max-width: 200px !important;
+  width: 100%;
   height: 2.8rem !important;
   margin-left: 5rem; }
   @media only screen and (max-width: 800px) {
@@ -858,6 +865,10 @@ button[type="submit"]:hover {
   padding: 1.2rem 2rem;
   z-index: 10;
   text-align: center; }
+  @media only screen and (max-width: 1400px) {
+    .c-banner {
+      font-size: 1.4rem;
+      height: 100px; } }
   @media only screen and (max-width: 1100px) {
     .c-banner {
       font-size: 1.2rem;
@@ -976,7 +987,7 @@ button[type="submit"]:hover {
   @media only screen and (max-width: 800px) {
     .homepage-categories {
       flex-direction: column;
-      margin-top: 2rem; } }
+      margin-top: 10rem; } }
   .homepage-categories li {
     flex-basis: 30%; }
 
