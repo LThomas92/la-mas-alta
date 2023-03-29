@@ -1,8 +1,14 @@
-<?php get_header(); ?>
+<?php get_header(); 
+  $bannerText = get_field('banner_text', 'option');
+?>
 
-<div class="c-banner">
-  <?php echo get_field('banner_text', 'option'); ?>
-</div>
+<?php if($bannerText) { ?>
+  <div class="c-banner">
+    <?php echo $bannerText; ?>
+  </div>
+<?php } ?>
+
+
 
 		<div class="container-margins">
 

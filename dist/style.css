@@ -148,6 +148,9 @@
   cursor: pointer;
   margin-top: 1rem;
   margin-left: 1.5rem; }
+  @media only screen and (max-width: 800px) {
+    .close-icon {
+      width: unset; } }
 
 .heart-icon {
   max-width: 24px;
@@ -253,7 +256,6 @@
       cursor: pointer;
       margin-left: 0.5rem;
       max-width: 24px;
-      width: 100%;
       height: 24px; } }
 
 .mobile-margins {
@@ -301,7 +303,6 @@
   margin-left: 5rem; }
   @media only screen and (max-width: 800px) {
     .la-mas-logo__img {
-      height: 1.8rem !important;
       margin-left: 0; } }
 
 #third-menu {
@@ -880,17 +881,14 @@ button[type="submit"]:hover {
 
 .homepage-category-container {
   display: flex;
-  flex-direction: column;
-  margin: 2rem 0; }
+  flex-direction: column; }
   .homepage-category-container__featured-header {
     display: flex;
-    margin-top: 5rem;
     margin-bottom: 10rem; }
     @media only screen and (max-width: 800px) {
       .homepage-category-container__featured-header {
         flex-direction: column;
-        margin-bottom: 2.5rem;
-        margin-top: 2.5rem; } }
+        margin-bottom: 2.5rem; } }
   .homepage-category-container__featured-images {
     display: flex;
     justify-content: space-between;
@@ -1080,6 +1078,10 @@ button[type="submit"]:hover {
   .single-product-container .woocommerce-product-details__short-description {
     display: none;
     margin-bottom: 1rem; }
+  .single-product-container .woocommerce-Price-amount {
+    font-size: 1.2rem;
+    font-family: "Archivo Narrow", sans-serif;
+    margin-top: 0.5rem; }
 
 .single_variation_wrap {
   margin-top: 0.5rem; }

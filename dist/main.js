@@ -214,6 +214,8 @@ $('.single-product-container__img-container').slick({
   fade: true,
   dots: true,
   ceneterMode: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
   fadeSpeed: 3000
 });
 

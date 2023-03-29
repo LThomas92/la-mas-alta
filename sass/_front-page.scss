@@ -30,15 +30,15 @@
 .homepage-category-container {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0;
+    // margin: 2rem 0;
     &__featured-header {
         display: flex;
-        margin-top: 5rem;
+        // margin-top: 5rem;
         margin-bottom: 10rem;
         @media only screen and (max-width: 800px) {
             flex-direction: column;
             margin-bottom: 2.5rem;
-            margin-top: 2.5rem;
+            // margin-top: 2.5rem;
         }
     }
     &__featured-images {
