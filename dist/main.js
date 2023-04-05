@@ -215,7 +215,7 @@ $('.single-product-container__img-container').slick({
   dots: true,
   ceneterMode: true,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 3000,
   fadeSpeed: 3000
 });
 

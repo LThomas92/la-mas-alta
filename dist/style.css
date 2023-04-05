@@ -72,7 +72,14 @@
   top: 12px;
   left: 16px;
   color: #000;
-  font-weight: 500; }
+  font-weight: 500;
+  background-color: #dec9a7;
+  border-radius: 50%;
+  width: 50%;
+  color: #fff;
+  font-family: "Archivo Narrow", sans-serif;
+  padding-left: 0.3rem;
+  font-weight: 600; }
 
 .header-right-menu {
   display: flex;
@@ -1306,8 +1313,9 @@ button[type="submit"]:hover {
       border: none;
       background: none;
       outline: none;
-      text-indent: -9999px;
-      width: 1.2rem; }
+      width: 1.2rem;
+      height: 1.2rem;
+      font-size: 0; }
 
 .woocommerce-Tabs-panel > h2 {
   display: none; }

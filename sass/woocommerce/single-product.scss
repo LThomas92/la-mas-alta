@@ -371,11 +371,12 @@
             border: none;
             background: none;
             outline: none;
-            text-indent: -9999px;
             width: 1.2rem;
+            height: 1.2rem;
+            font-size: 0;
+          }
         }
     }
-}
 
 .woocommerce-Tabs-panel > h2 {
     display: none;
