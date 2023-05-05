@@ -802,14 +802,18 @@ button[type="submit"]:hover {
         .page-about__img-container figure img:hover, .page-about__img-container figure img:focus {
           transform: scale(1.02); }
   .page-about__text {
-    width: 49%; }
+    width: 49%;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem; }
     @media only screen and (max-width: 800px) {
       .page-about__text {
         width: 100%; } }
   .page-about__title {
     text-align: center;
     font-size: 2.5rem;
-    margin: 1.2rem 0; }
+    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem; }
     .page-about__title::after {
       background-color: #dec9a7;
       width: 30%;
@@ -820,6 +824,16 @@ button[type="submit"]:hover {
     @media only screen and (max-width: 800px) {
       .page-about__title {
         font-size: 2rem; } }
+  .page-about__our-story {
+    display: block;
+    margin-bottom: 5rem; }
+    .page-about__our-story p {
+      margin-bottom: 2.5rem; }
+  .page-about__our-story-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #dec9a7;
+    margin-bottom: 1.2rem; }
 
 .error-404 {
   margin-top: 8.5rem; }

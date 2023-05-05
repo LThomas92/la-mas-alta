@@ -40,6 +40,8 @@
     }
     &__text {
         width: 49%;
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
         @media only screen and (max-width: 800px) {
             width: 100%;
           }
@@ -47,8 +49,10 @@
     &__title {
        text-align: center;
        font-size: 2.5rem;
-       margin: 1.2rem 0;
-       &::after{
+       display: block;
+       margin-top: 2.5rem;
+       margin-bottom: 3rem;
+       &::after {
            background-color: $tan;
            width: 30%;
            height: 1.2px;
@@ -60,5 +64,18 @@
        @media only screen and (max-width: 800px) {
         font-size: 2rem;
         }
+    }
+    &__our-story {
+        display: block;
+        margin-bottom: 5rem;
+        p {
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__our-story-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: $tan;
+        margin-bottom: 1.2rem;
     }
 }
