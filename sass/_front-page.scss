@@ -26,135 +26,86 @@
     }
 }
 
-//HOMEPAGE CATEGORY
-.homepage-category-container {
-    display: flex;
-    flex-direction: column;
-    // margin: 2rem 0;
-    &__featured-header {
-        display: flex;
-        // margin-top: 5rem;
-        margin-bottom: 10rem;
-        @media only screen and (max-width: 800px) {
-            flex-direction: column;
-            margin-bottom: 2.5rem;
-            // margin-top: 2.5rem;
-        }
-    }
-    &__featured-images {
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        position: relative;
-        @media only screen and (max-width: 800px) {
-            flex-direction: column;
-        }
-    }
-    &__featured-image {
-        position: relative;
-        width: 50%;
-        z-index: 2;
-        @media only screen and (max-width: 800px) {
-            width: 100%;
-        }
-        &:first-child {
-            border-right: 10px solid $tan;
-            @media only screen and (max-width: 800px) {
-                border-right: 0;
-                border-bottom: 10px solid $tan;
-            }
-        }
-        img {
-            width: 100%;
-            height: 1000px;
-            object-fit: cover;
-            display: block;
-            @media only screen and (max-width: 800px) {
-                height: 500px;
-            }
-        }
-    }
-    &__featured-title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        color: $white;
-        font-size: 2.5rem;
-        font-weight: 500;
-        margin-left: 1.5rem;
-        margin-bottom: 1.5rem;
-        background-color: $tan;
-        padding: 0.5rem 1.2rem;
-        cursor: pointer;
-        z-index: 1;
-    }
-    &__featured-img {
-        margin: 0;
-    }
-}
+.c-homepage {
 
-.homepage-category {
-width: 100%;
-padding-right: 0.4rem;
-@media only screen and (max-width: 800px) {
-    margin-top: 1.2rem;
-    padding-right: 0;
- }
-&:last-child {
-    padding-right: 0;
-}
-figure {
+  &__featured-images {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  &__featured-link {
+    background-color: $black;
+    color: $white;
+    padding: 0.8rem 1.2rem;
+    display: inline-block;
+    margin-left: 2.5rem;
+  }
+  &__featured-big {
+    margin-right: 0.5rem;
     position: relative;
-    overflow: hidden;
-    &:before {
-        content: "";
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 0;
-        padding-bottom: 100%;
-    }
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        object-fit: cover;
-        transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
-        &:hover , &:focus {
-            transform: scale(1.02);
-        }
-    }
-}
-    &__text {
-        display: block;
-        font-size: 0.8rem;
-        text-align: center;
-        color: $black;
-        cursor: pointer;
-        &:hover {
-            color: $gray;
-            text-decoration: underline;
-            text-underline-position: under;
-            transition: 300ms;
-        }
-    }
-}
-
-//Homepage Categories
-.homepage-categories {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  width: 100%;
-  margin-top: 4rem;
-  @media only screen and (max-width: 800px) {
-    flex-direction: column;
-    margin-top: 10rem;
-}
-  li {
-    flex-basis: 30%;
+    figure {
+      position: relative;
+      overflow: hidden;
+      &:before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 80%;
+      }
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+      }
+  }
+  }
+  &__featured-meta-info {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+  &__featured-small-title {
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  &__featured-small {
+    figure {
+      position: relative;
+      overflow: hidden;
+      &:before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 159%;
+      }
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+      }
+  }
+  }
+  &__latest-collections-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2.5rem 0;
   }
 }
