@@ -42,6 +42,35 @@
   <h4 class="c-homepage__latest-collections-title">Shop Our Collections</h4>
 
 
+  <?php if( have_rows('collections_list') ): ?>
+
+<ul class="c-homepage__latest-collections-list">
+    <?php while( have_rows('collections_list') ) : the_row();
+
+        
+        $image = get_sub_field('image');
+        $title = get_sub_field('title');
+        $cta = get_sub_field('cta');
+        ?>
+        <li class="c-homepage__latest-collection-list-item">
+          <figure>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+          </figure>
+          <a href="<?php echo $cta['url']; ?>">
+          <h4 class="c-homepage__latest-collection-list-item-title"><?php echo $title; ?></h4>
+          </a>
+        </li>
+
+    <?php endwhile; ?>
+  </ul>
+
+<?php 
+else :
+    // Do something...
+endif; ?>
+  </ul>
+
+
 
   </div>
 
