@@ -41,7 +41,6 @@
     color: $white;
     padding: 0.8rem 1.2rem;
     display: inline-block;
-    margin-left: 2.5rem;
   }
   &__featured-big {
     margin-right: 0.5rem;
@@ -75,10 +74,17 @@
   }
   &__featured-small-title {
     color: $white;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__featured-big-title {
+    color: $white;
+    font-family: $archivo;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
   }
   &__featured-small {
     figure {
@@ -104,7 +110,23 @@
   }
   }
   &__latest-collections {
-    // INCLUDE CONTAINER MARGINS
+    @include container-margins;
+  }
+  &__latest-collections-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    list-style-type: none;
+    margin-bottom: 2rem;
+  }
+  &__latest-collections-list-item {
+
+  }
+  &__latest-collection-list-item-title {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: $black;
+    font-weight: 500;
   }
   &__latest-collections-title {
     text-align: center;
@@ -121,7 +143,7 @@
           display: block;
           width: 100%;
           height: 0;
-          padding-bottom: 80%;
+          padding-bottom: 150%;
       }
       img {
           display: block;
@@ -133,5 +155,110 @@
           object-fit: cover;
       }
   }
+  }
+  &__best-sellers {
+    @include container-margins;
+    margin-top: 6.5rem;
+  }
+  &__best-sellers-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    list-style-type: none;
+  }
+  &__best-sellers-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+  }
+  &__best-sellers-list-item {
+    figure {
+      position: relative;
+      overflow: hidden;
+      &:before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 159%;
+      }
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+      }
+  }
+  }
+  &__best-sellers-list-item-title {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  &__best-sellers-desc {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  &__newsletter-section {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 0.8fr 0.6fr;
+    box-shadow: $box-shadow-light-black--2;
+    @include container-margins;
+  }
+  &__newsletter-image {
+    max-width: 100%;
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__newsletter-content {
+    padding: 1.5rem;
+
+  }
+  &__newsletter-title {
+    margin-bottom: 1.5rem;
+  }
+  &__newsletter-desc {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: rgba($black, 0.4);
+  }
+  &__newsletter-form {
+    label {
+      margin-right: 1rem;
+    }
+    .mc4wp-form-fields {
+      p {
+        margin-bottom: 1.2rem;
+      }
+      input[type="text"], input[type="email"] {
+        width: 50% !important;
+        padding: 0.25rem 0 !important;
+        border: none;
+        border-bottom: 1.2px solid $black;
+        outline: none;
+        margin-right: 1rem;
+      }
+      input[type="email"] {
+        margin-left: 0.5rem;
+      }
+      input[type="submit"] {
+        background-color: $black;
+        color: $white;
+        padding: 0.8rem 1.2rem;
+        display: inline-block;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-top: 1.2rem;
+      }
+    }
   }
 }
