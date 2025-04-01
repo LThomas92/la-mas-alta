@@ -31,8 +31,15 @@
   &__featured-images {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
+    @media only screen and (max-width: $tablet_max) {
+      display: block;
+      grid-template-columns: 1fr;
+  }
     li {
       list-style-type: none;
+      @media only screen and (max-width: $tablet_max) {
+        margin-bottom: 0.5rem;
+    }
     }
   }
 
@@ -45,6 +52,9 @@
   &__featured-big {
     margin-right: 0.5rem;
     position: relative;
+    @media only screen and (max-width: $tablet_max) {
+      margin-right: 0;
+  }
     figure {
       position: relative;
       overflow: hidden;
@@ -118,6 +128,9 @@
     grid-gap: 15px;
     list-style-type: none;
     margin-bottom: 2rem;
+    @media only screen and (max-width: $tablet_max) {
+      grid-template-columns: 1fr 1fr;
+  }
   }
   &__latest-collection-list-item-title {
     margin-top: 0.5rem;
@@ -131,6 +144,9 @@
     margin: 2.5rem 0;
   }
   &__latest-collection-list-item {
+    @media only screen and (max-width: $tablet_max) {
+      margin-bottom: 2rem;
+  }
     figure {
       position: relative;
       overflow: hidden;
@@ -160,12 +176,19 @@
   &__best-sellers {
     @include container-margins;
     margin-top: 6.5rem;
+    @media only screen and (max-width: $tablet_max) {
+      margin-top: 2rem;
+  }
   }
   &__best-sellers-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     list-style-type: none;
+    @media only screen and (max-width: $tablet_max) {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
   }
   &__best-sellers-title {
     font-size: 1.5rem;
@@ -173,6 +196,9 @@
     margin-bottom: 1.2rem;
   }
   &__best-sellers-list-item {
+    @media only screen and (max-width: $tablet_max) {
+      margin-bottom: 2.5rem;
+  }
     figure {
       position: relative;
       overflow: hidden;
@@ -183,6 +209,9 @@
           width: 100%;
           height: 0;
           padding-bottom: 159%;
+          @media only screen and (max-width: $tablet_max) {
+            padding-bottom: 100%;
+        }
       }
       img {
           display: block;
@@ -203,10 +232,17 @@
     margin-top: 0.5rem;
     text-align: center;
     color: $black;
+    font-weight: 400;
+    @media only screen and (max-width: $tablet_max) {
+      margin-top: 1.5rem;
+  }
   }
   &__best-sellers-desc {
     text-align: center;
     margin-bottom: 4rem;
+    @media only screen and (max-width: $tablet_max) {
+      margin-bottom: 2.5rem;
+  }
   }
   &__newsletter-section {
     margin-top: 8rem;
@@ -215,6 +251,10 @@
     grid-template-columns: 0.8fr 0.6fr;
     box-shadow: $box-shadow-light-black--2;
     @include container-margins;
+    @media only screen and (max-width: $tablet_max) {
+      display: block;
+      margin-top: 4rem;
+  }
   }
   &__newsletter-image {
     max-width: 100%;
