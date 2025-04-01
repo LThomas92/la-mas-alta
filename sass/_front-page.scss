@@ -119,9 +119,6 @@
     list-style-type: none;
     margin-bottom: 2rem;
   }
-  &__latest-collections-list-item {
-
-  }
   &__latest-collection-list-item-title {
     margin-top: 0.5rem;
     text-align: center;
@@ -153,6 +150,10 @@
           left: 0;
           top: 0;
           object-fit: cover;
+          transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+          &:hover {
+              transform: scale(1.05);
+            }
       }
   }
   }
@@ -191,12 +192,17 @@
           left: 0;
           top: 0;
           object-fit: cover;
+          transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+          &:hover {
+              transform: scale(1.05);
+            }
       }
   }
   }
   &__best-sellers-list-item-title {
     margin-top: 0.5rem;
     text-align: center;
+    color: $black;
   }
   &__best-sellers-desc {
     text-align: center;

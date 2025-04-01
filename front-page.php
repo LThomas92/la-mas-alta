@@ -54,10 +54,10 @@
         $cta = get_sub_field('cta');
         ?>
         <li class="c-homepage__latest-collection-list-item">
+          <a href="<?php echo $cta['url']; ?>">
           <figure>
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
           </figure>
-          <a href="<?php echo $cta['url']; ?>">
           <h4 class="c-homepage__latest-collection-list-item-title"><?php echo $title; ?></h4>
           </a>
         </li>
@@ -86,11 +86,13 @@ endif; ?>
         $title = get_sub_field('title'); ?>
 
       <li class="c-homepage__best-sellers-list-item">
+          <a href="<?php echo $title['url']; ?>">
           <figure>
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
           </figure>
           <h4 class="c-homepage__best-sellers-list-item-title"><?php echo $title['title']; ?></h4>
-      </li>
+          </a>
+        </li>
         
     <?php endwhile; ?>
   </ul>
