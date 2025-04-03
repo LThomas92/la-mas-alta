@@ -1,0 +1,30 @@
+.c-single-collections {
+    @include container-margins;
+    &__header {
+        display: grid;
+        grid-template-columns: 0.6fr 1fr;
+        position: relative;
+    }
+    &__header-title {
+        margin-top: 4rem;
+        font-size: 4rem;
+        position: relative;
+        right: -50%;
+        strong {
+            color: $tan;
+        }
+    }
+    &__header-desc {
+        margin-top: 4rem;
+    }
+    &__header-content-box {
+        position: relative;
+        z-index: 5; /* Ensure the content box is below the title if needed */
+    }
+    &__image {
+        width: 100%;
+        height: 100%; /* Make sure the image takes full height of the container */
+        display: block;
+        object-fit: cover;
+    }
+}

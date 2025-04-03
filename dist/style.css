@@ -2144,6 +2144,41 @@ input[type="email"] {
 .return-to-shop {
   margin-bottom: 2rem; }
 
+.c-single-collections {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .c-single-collections {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-single-collections {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-single-collections__header {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    position: relative; }
+  .c-single-collections__header-title {
+    margin-top: 4rem;
+    font-size: 4rem;
+    position: relative;
+    right: -50%; }
+    .c-single-collections__header-title strong {
+      color: #dec9a7; }
+  .c-single-collections__header-desc {
+    margin-top: 4rem; }
+  .c-single-collections__header-content-box {
+    position: relative;
+    z-index: 5;
+    /* Ensure the content box is below the title if needed */ }
+  .c-single-collections__image {
+    width: 100%;
+    height: 100%;
+    /* Make sure the image takes full height of the container */
+    display: block;
+    object-fit: cover; }
+
 .container-margins {
   width: calc(100vw - calc(16px * 2));
   max-width: 959px;

@@ -27,6 +27,8 @@
 @import "woocommerce/dashboard";
 @import "woocommerce/wishlist";
 
+@import 'pages/collections';
+
 .container-margins {
   @include container-margins;
  }

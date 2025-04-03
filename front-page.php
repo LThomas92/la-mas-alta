@@ -104,8 +104,6 @@ endif; ?>
 </section>
 
 
-
-
 <section class="c-homepage__newsletter-section">
   <?php 
     $newsletterImage = get_field('newsletter_image', 'option');
@@ -128,8 +126,6 @@ endif; ?>
 
 
 </div>
-
-
 
 
 <?php get_footer(); ?>
