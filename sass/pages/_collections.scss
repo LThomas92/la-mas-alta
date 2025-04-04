@@ -10,6 +10,7 @@
         font-size: 4rem;
         position: relative;
         right: -50%;
+        text-shadow: 1px 1px 2px $black;
         strong {
             color: $tan;
         }
@@ -19,12 +20,104 @@
     }
     &__header-content-box {
         position: relative;
-        z-index: 5; /* Ensure the content box is below the title if needed */
+        z-index: 5;
+    }
+    &__image-container {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
     }
     &__image {
         width: 100%;
-        height: 100%; /* Make sure the image takes full height of the container */
+        height: 100%;
         display: block;
         object-fit: cover;
+    }
+    &__products-section {
+        @include container-margins;
+        margin-top: 12rem;
+        margin-bottom: 7rem;
+    }
+    &__products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        list-style-type: none;
+    }
+    &__product {
+        margin-bottom: 3.5rem;
+        figure {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba($black, 0.1);
+            &:before {
+                content: "";
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+            }
+        }
+    }
+    &__product-title {
+        margin-top: 1rem;
+    }
+    &__product-desc {
+        color: rgba($black, 0.2);
+        font-weight: 400;
+    }
+
+    //Product Details Section
+    &__product-details-section {
+        position: relative;
+        margin-bottom: 3.5rem;
+    }
+    &__product-details-bg-image {
+        position: relative;
+        img {
+            width: 100vw;
+            height: 40vh;
+            display: block;
+            object-fit: cover;
+            position: relative;
+            left: calc(50% - 50vw);
+        }
+    }
+    &__product-details-box {
+        background-color: $lightBlack;
+        width: calc(50% - 16px);
+        z-index: 10;
+        padding: 4rem 5rem;
+        position: absolute;
+        top: -15%;
+    }
+    &__product-details-title {
+        color: $white;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    &__product-details-desc {
+        color: rgba($white, 0.8);
+        font-weight: 300;
+        margin-top: 1.2rem;
     }
 }

@@ -1323,7 +1323,7 @@ button[type="submit"]:hover {
   .related h2 {
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Spectral", serif;
     font-weight: 500; }
   .related .add_to_cart_button {
     display: none !important; }
@@ -1567,7 +1567,7 @@ select {
   font-size: 2.7rem;
   position: relative;
   padding-top: 0.8rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Spectral", serif;
   font-weight: 500; }
   @media only screen and (max-width: 800px) {
     .product-cat-title {
@@ -1689,7 +1689,7 @@ input[type="number"] {
   border: 1.5px solid #dec9a7; }
 
 .cart-subtotal, .order-total {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Spectral", serif;
   font-size: 1.2rem; }
 
 .secure-icon {
@@ -2163,21 +2163,103 @@ input[type="email"] {
     margin-top: 4rem;
     font-size: 4rem;
     position: relative;
-    right: -50%; }
+    right: -50%;
+    text-shadow: 1px 1px 2px #000; }
     .c-single-collections__header-title strong {
       color: #dec9a7; }
   .c-single-collections__header-desc {
     margin-top: 4rem; }
   .c-single-collections__header-content-box {
     position: relative;
-    z-index: 5;
-    /* Ensure the content box is below the title if needed */ }
+    z-index: 5; }
+  .c-single-collections__image-container {
+    position: relative; }
+    .c-single-collections__image-container::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10; }
   .c-single-collections__image {
     width: 100%;
     height: 100%;
-    /* Make sure the image takes full height of the container */
     display: block;
     object-fit: cover; }
+  .c-single-collections__products-section {
+    width: calc(100vw - calc(16px * 2));
+    max-width: 959px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 12rem;
+    margin-bottom: 7rem; }
+    @media (min-width: 1440px) {
+      .c-single-collections__products-section {
+        max-width: 1200px; } }
+    @media (max-width: 767px) {
+      .c-single-collections__products-section {
+        width: calc(100vw - calc(16px * 2)); } }
+  .c-single-collections__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    list-style-type: none; }
+  .c-single-collections__product {
+    margin-bottom: 3.5rem; }
+    .c-single-collections__product figure {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+      .c-single-collections__product figure:before {
+        content: "";
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; }
+      .c-single-collections__product figure img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover; }
+  .c-single-collections__product-title {
+    margin-top: 1rem; }
+  .c-single-collections__product-desc {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 400; }
+  .c-single-collections__product-details-section {
+    position: relative;
+    margin-bottom: 3.5rem; }
+  .c-single-collections__product-details-bg-image {
+    position: relative; }
+    .c-single-collections__product-details-bg-image img {
+      width: 100vw;
+      height: 40vh;
+      display: block;
+      object-fit: cover;
+      position: relative;
+      left: calc(50% - 50vw); }
+  .c-single-collections__product-details-box {
+    background-color: #1C1C1C;
+    width: calc(50% - 16px);
+    z-index: 10;
+    padding: 4rem 5rem;
+    position: absolute;
+    top: -15%; }
+  .c-single-collections__product-details-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .c-single-collections__product-details-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    margin-top: 1.2rem; }
 
 .container-margins {
   width: calc(100vw - calc(16px * 2));
@@ -2224,7 +2306,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Josefin Sans", sans-serif; }
+  font-family: "Spectral", serif; }
 
 textarea:focus,
 input:focus {
