@@ -2225,7 +2225,10 @@ input[type="email"] {
         position: absolute;
         left: 0;
         top: 0;
-        object-fit: cover; }
+        object-fit: cover;
+        transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1); }
+        .c-single-collections__product figure img:hover {
+          transform: scale(1.05); }
   .c-single-collections__product-title {
     margin-top: 1rem; }
   .c-single-collections__product-desc {
