@@ -261,27 +261,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_67f01cc5a9318",
-            "label": "Product Details Title",
-            "name": "product_details_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_67f01cdaa9319",
             "label": "Product Details Description",
             "name": "product_details_description",
@@ -321,5 +300,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743789398
+    "modified": 1746647564
 }
