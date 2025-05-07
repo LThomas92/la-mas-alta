@@ -29,11 +29,13 @@
               $desc = get_sub_field('description');
         ?>
         <li class="c-single-collections__product">
+            <a class="c-single-collections__product-cta" href="<?php echo $cta['url']; ?>">
             <figure>
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
             </figure>
             <h4 class="c-single-collections__product-title"><?php echo $title; ?></h4>
             <p class="c-single-collections__product-desc"><?php echo $desc; ?></p>
+            </a>
         </li>
 
   <?php endwhile; ?>
@@ -47,14 +49,13 @@ endif; ?>
 <section class="c-single-collections__product-details-section">
     <?php 
         $bgImage = get_field('product_details_image');
-        $productDetailTitle = get_field('product_details_title');
         $productDetailDesc = get_field('product_details_description');
     ?>
     <div class="c-single-collections__product-details-bg-image">
         <img src="<?php echo $bgImage['url']; ?>" alt="<?php echo $bgImage['alt']; ?>">
     </div>
     <div class="c-single-collections__product-details-box">
-        <h3 class="c-single-collections__product-details-title"><?php echo $productDetailTitle; ?></h3>
+        <h3 class="c-single-collections__product-details-title">Product Details</h3>
         <p class="c-single-collections__product-details-desc"><?php echo $productDetailDesc; ?></p>
     </div>
 </section>

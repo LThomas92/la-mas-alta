@@ -88,6 +88,11 @@
         font-weight: 400;
     }
 
+    &__product-cta {
+        color: $black;
+        text-align: center;
+    }
+
     //Product Details Section
     &__product-details-section {
         position: relative;

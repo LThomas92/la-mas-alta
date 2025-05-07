@@ -30,7 +30,7 @@
 
   &__featured-images {
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
     @media only screen and (max-width: $tablet_max) {
       display: block;
       grid-template-columns: 1fr;
@@ -48,13 +48,13 @@
     color: $white;
     padding: 0.8rem 1.2rem;
     display: inline-block;
+    position: absolute;
+    top: 20px;
   }
-  &__featured-big {
+  &__featured-image-list-item {
     margin-right: 0.5rem;
     position: relative;
-    @media only screen and (max-width: $tablet_max) {
-      margin-right: 0;
-  }
+  
     figure {
       position: relative;
       overflow: hidden;
@@ -82,42 +82,12 @@
     top: 2rem;
     left: 2rem;
   }
-  &__featured-small-title {
-    color: $white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
   &__featured-big-title {
     color: $white;
     font-family: $archivo;
     font-weight: 600;
     margin-bottom: 1.6rem;
     text-transform: uppercase;
-  }
-  &__featured-small {
-    figure {
-      position: relative;
-      overflow: hidden;
-      &:before {
-          content: "";
-          position: relative;
-          display: block;
-          width: 100%;
-          height: 0;
-          padding-bottom: 159%;
-      }
-      img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          object-fit: cover;
-      }
-  }
   }
   &__latest-collections {
     @include container-margins;
@@ -127,6 +97,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
     list-style-type: none;
+    margin-top: 4.5rem;
     margin-bottom: 2rem;
     @media only screen and (max-width: $tablet_max) {
       grid-template-columns: 1fr 1fr;
@@ -144,6 +115,7 @@
     margin: 2.5rem 0;
   }
   &__latest-collection-list-item {
+    margin-right: 1.5rem;
     @media only screen and (max-width: $tablet_max) {
       margin-bottom: 2rem;
   }

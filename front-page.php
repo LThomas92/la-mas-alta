@@ -10,34 +10,28 @@
 
 <div class="c-homepage">
 
-    <div class="c-homepage__featured-images">
+    <?php if( have_rows('featured_header_images') ): ?>
+      
+      <ul class="c-homepage__featured-images">
+    <?php while( have_rows('featured_header_images') ) : the_row(); ?>
 
-        <?php 
-        $bigImage = get_field('featured_big_image');
-        $smallImage = get_field('featured_small_image');
-        $link = get_field('link');
-        $smallTitle = get_field('small_title');
-        $bigTitle = get_field('big_title')
+        <?php $image = get_sub_field('image'); 
+              $link = get_sub_field('link');
         ?>
-
-        <li class="c-homepage__featured-big">
+        <li class="c-homepage__featured-image-list-item">
           <figure>
-            <img src="<?php echo $bigImage['url']; ?>" alt="<?php echo $bigImage['alt']; ?>">
-          </figure>
-          <div class="c-homepage__featured-meta-info">
-          <p class="c-homepage__featured-small-title"><?php echo $smallTitle; ?></p>
-          <h2 class="c-homepage__featured-big-title"><?php echo $bigTitle; ?></h2>
-          <a href="<?php echo $link['url']; ?>" class="c-homepage__featured-link"><?php echo $link['title']; ?></a> 
-          </div> 
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            </figure>
+            <a href="<?php echo $link['url']; ?>" class="c-homepage__featured-link"><?php echo $link['title']; ?></a> 
         </li>
 
-        <li class="c-homepage__featured-small">
-          <figure>
-            <img src="<?php echo $smallImage['url']; ?>" alt="<?php echo $smallImage['alt']; ?>">
-          </figure>
-        </li>
+    <?php endwhile; ?>
+    </ul>
 
-  </div>
+<?php 
+else :
+    // Do something...
+endif; ?>
 
   <div class="c-homepage__latest-collections">
   <h4 class="c-homepage__latest-collections-title">Shop Our Collections</h4>
