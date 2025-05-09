@@ -67,11 +67,7 @@ endif; ?>
 			<div>
 				<!-- share product social media -->
 			</div>
-			<div class="single-product-container__reviews-container">
-			<a href="#reviews"><p class="single-product-container__reviews-container__reviews">Reviews&nbsp;(<span><?php echo get_comments_number(); ?></span>)</p></a>
-			<a href="#comment"><p class="single-product-container__reviews-container__write-review">Write a Review</p></a>
-			</div> <!-- REVIEWS CONTAINER -->
-
+			
 			<ul class="single-post-share-icons">
                  <li>
                  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
@@ -102,14 +98,6 @@ endif; ?>
 
 		<?php endwhile; // end of the loop. ?>
 
-		<?php if ( get_comments_number() ) { ?>
-													<p class="reviews-title__rating"><?php echo get_comments_number(); ?> Reviews</p>
-												<?php } else { ?>
-													<p class="reviews-title__rating">No Reviews</p>
-												<?php } ?>
-								<div class="gutenberg-styles">
-											<?php comments_template(); ?>
-												</div>
 	</div> <!-- container margins -->
 
 <?php

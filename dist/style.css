@@ -1318,7 +1318,7 @@ button[type="submit"]:hover {
     color: #000 !important;
     font-weight: 300 !important; }
   .related img {
-    width: 20% !important; }
+    width: 50% !important; }
     @media only screen and (max-width: 800px) {
       .related img {
         width: 100% !important; } }
@@ -1517,7 +1517,7 @@ select {
   width: 100vw;
   left: calc(50% - 50vw);
   position: relative;
-  height: 70vh;
+  height: 50vh;
   background-position: center center; }
   .category-product-header__title {
     position: absolute;
