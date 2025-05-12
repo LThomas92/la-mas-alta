@@ -71,7 +71,7 @@ endif; ?>
 			<ul class="single-post-share-icons">
                  <li>
                  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-                    <a title="Share this post on Twitter" target="_blank" href="http://twitter.com/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" alt="1" class="single-post__share-icon-img"/></a>
+                    <a title="Share this post on X" target="_blank" href="http://twitter.com/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/x-icon.svg" alt="1" class="single-post__share-icon-img"/></a>
                  </li>
                <li>
                 <a href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>" title="Share this post on Facebook" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" alt="1" class="single-post__share-icon-img"/></a>
