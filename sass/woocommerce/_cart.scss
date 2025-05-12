@@ -1,27 +1,34 @@
 .cart-page-container {
     display: flex;
     justify-content: space-between;
+    margin: 0 1.5rem;
+    margin-bottom: 2rem;
     @media only screen and (max-width: 800px) {
         flex-direction: column;
      }
     .woocommerce-cart-form {
-        width: 60%;
+        width: 65%;
         @media only screen and (max-width: 800px) {
             width: 100%;
          }
-        .shop_table{
+        .shop_table {
             border: none;
             .product-thumbnail {
                 img {
-                    width: 100%;
+                    width: 35%;
                     object-fit: cover;
                 }
             }
+            .product-name {
+                width: 50%;
+            }
             .product-name a {
                 color: $black;
+                font-size: 1.2rem;
+                display: block;
+                margin-bottom: 1.2rem;
                 &:hover {
                     color: $tan;
-                    transition: 300ms;
                 }
             }
             th {
@@ -30,9 +37,17 @@
         }
     }
     .cart-collaterals {
-       width: 38%;
+       width: 30%;
        @media only screen and (max-width: 800px) {
         width: 100%;
+     }
+     &__coupon-title {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+     &__title {
+        font-family: $archivo;
+        margin-bottom: 1.5rem;
      }
     }
     .cart_totals {
@@ -59,16 +74,6 @@
     }
 }
 
-// input[type=number]::-webkit-inner-spin-button {
-//     -webkit-appearance: none;
-//   }
-
-  input[type="number"] {
-      background-color: transparent;
-      outline: none;
-      border: 1.5px solid $tan;
-  }
-
   //CART TOTAL
   .cart-subtotal, .order-total{
     font-family: $spectral;
@@ -81,33 +86,35 @@
 
 .coupon {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 
 #coupon_code {
-    width: 100%;
+    width: 50%;
     border: none;
-    border-bottom: 1px solid $gray;
-    margin-bottom: 0.5rem;
+    border: 1px solid $black;
+    padding-left: 1rem;
+    padding: 0.5rem 0.9rem !important; 
 }
 
 button[name="apply_coupon"] {
-    background-color: $tan !important;
+    background-color: $black !important;
     color: $white !important;
     font-family: $archivo;
+    font-weight: 400 !important;
     border-radius: 0 !important;
-    margin-bottom: 1.5rem !important;
-    &:hover {
-        transition: 300ms;
-        color: $black !important;
-    }
+    padding: 0.5rem 0.9rem !important; 
+    width: 25% !important;
 }
 
 button[name="update_cart"] {
-    background-color: $gray !important;
+    background-color: $black !important;
     color: $white !important;
     font-family: $archivo;
     border-radius: 0 !important;
+    width: 25% !important;
+    display: block;
+    margin-bottom: 2rem;
 }
 
   //CHECKOUT 
@@ -191,6 +198,28 @@ button[name="update_cart"] {
     }
   }
 
-.shopping-cart-title-items {
-    margin-top: 2rem;
+.woocommerce-message {
+    display: none;
+}
+
+.shop-cart-title {
+    margin: 2.5rem 0;
+    margin-left: 2.5rem;
+}
+
+.woocommerce a.remove {
+    color: rgba($black, 0.2) !important;
+    font-weight: 300;
+    font-family: $archivo;
+    font-size: 1.1rem !important;
+    display: block;
+    margin-top: 1rem;
+    &:hover {
+        background: none;
+        color: rgba($black, 0.2) !important;
+    }
+}
+
+.cart_totals {
+    margin-top: 1.5rem !important;
 }
