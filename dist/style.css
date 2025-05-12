@@ -1235,17 +1235,7 @@ button[type="submit"]:hover {
     font-family: "Archivo Narrow", sans-serif;
     font-size: 1rem;
     margin-right: 1rem; }
-  .single-product-container .quantity {
-    margin-top: 0.5rem; }
-    .single-product-container .quantity::before {
-      content: 'Quantity';
-      display: inline-block;
-      margin-right: 3rem;
-      font-family: "Archivo Narrow", sans-serif;
-      width: 10px;
-      height: 10px; }
   .single-product-container .woocommerce-product-details__short-description {
-    display: none;
     margin-bottom: 1rem; }
   .single-product-container .woocommerce-Price-amount {
     font-size: 1.2rem;
@@ -1335,74 +1325,6 @@ button[type="submit"]:hover {
   .single-post__share-icon-img:hover, .single-post__share-icon-img:focus {
     transform: rotate(10deg); }
 
-.woocommerce #reviews #comments h2 {
-  display: none; }
-
-.woocommerce #reviews #comments ol.commentlist li:nth-child(even) {
-  margin-left: 4rem; }
-
-.woocommerce #reviews #comments ol.commentlist li .comment-text {
-  border: none; }
-  .woocommerce #reviews #comments ol.commentlist li .comment-text::after {
-    content: '';
-    background-color: rgba(78, 78, 78, 0.2);
-    width: 100%;
-    height: 1px; }
-
-.woocommerce-review__dash {
-  display: none; }
-
-.comment-text .meta {
-  display: flex;
-  flex-direction: column; }
-
-.woocommerce #reviews #comments ol.commentlist li img.avatar {
-  border-radius: 50%;
-  width: 50px;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem; }
-
-.reviews-title__rating {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(78, 78, 78, 0.4); }
-
-#review_form {
-  margin: 1.5rem 0; }
-  #review_form #reply-title {
-    font-family: "Archivo Narrow", sans-serif;
-    padding-bottom: 0.2rem;
-    border-bottom: 1.5px solid #dec9a7; }
-  #review_form .comment-form-rating {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 1rem; }
-    #review_form .comment-form-rating label {
-      font-family: "Archivo Narrow", sans-serif;
-      margin-bottom: 0.4rem; }
-  #review_form #comment {
-    font-family: "Archivo Narrow", sans-serif;
-    font-size: 1.1rem; }
-  #review_form .form-submit {
-    text-align: center; }
-  #review_form #submit {
-    -webkit-appearance: none;
-    background-color: #dec9a7 !important;
-    color: #fff !important;
-    border: none;
-    font-family: "Archivo Narrow", sans-serif;
-    margin: 0 auto;
-    padding: 0.8rem 2.5rem !important; }
-    #review_form #submit:hover {
-      background-color: #000 !important;
-      color: #dec9a7 !important;
-      cursor: pointer; }
-
-.stars a:hover:after, .stars a.active:after {
-  color: #ffb600; }
-
 .woocommerce-breadcrumb {
   margin: 0 4rem !important;
   margin-bottom: 1rem !important;
@@ -1411,45 +1333,6 @@ button[type="submit"]:hover {
     .woocommerce-breadcrumb {
       margin: 0 1rem !important;
       margin-bottom: 1rem !important; } }
-
-.single-product-container__reviews-container__reviews {
-  color: #000; }
-  .single-product-container__reviews-container__reviews:hover {
-    color: rgba(78, 78, 78, 0.4); }
-
-.single-product-container__reviews-container__write-review {
-  color: #000; }
-  .single-product-container__reviews-container__write-review:hover {
-    color: rgba(78, 78, 78, 0.4); }
-
-.comment-notes {
-  margin-top: 1rem !important; }
-
-.comment-form-author, .comment-form-email {
-  display: flex;
-  flex-direction: column; }
-
-.star-rating span:before, .star-rating:before, .woocommerce-page .star-rating:before {
-  color: #f1d554; }
-
-.woocommerce p.stars a {
-  color: #f1d554; }
-
-#author, #email {
-  padding: 0.4rem; }
-
-.comment-form-author input[type="text"] {
-  border: 1px solid #000 !important; }
-
-.comment-form-author input[type="email"] {
-  border: 1px solid #000 !important; }
-
-.comment-form-email input[type="email"] {
-  border: 1px solid #000 !important; }
-
-.woocommerce #review_form #respond textarea {
-  border: 1px solid #000 !important;
-  padding: 0.5rem !important; }
 
 .related .products li img {
   transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1); }
@@ -1493,24 +1376,23 @@ button[type="submit"]:hover {
   justify-content: space-between;
   margin-top: 2rem; }
 
-.select2-search--dropdown {
+.stock, .reset_variations {
   display: none !important; }
 
-select {
-  font-family: "Archivo Narrow", sans-serif; }
+.variations {
+  margin-bottom: 1.5rem; }
 
-.read-more-btn {
-  background-color: #dec9a7;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.6rem;
-  font-weight: 600;
+.cfvsw-label-option {
+  width: 3rem;
+  height: 3rem;
   font-family: "Archivo Narrow", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1.2rem; }
+  font-size: 0.8rem; }
+
+.cfvsw-selected-label {
+  display: none; }
+
+.qib-button-wrapper .quantity input.input-text.qty.text {
+  font-size: 0.8rem !important; }
 
 .category-product-header {
   background-size: cover;

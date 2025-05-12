@@ -57,19 +57,8 @@
         margin-right: 1rem;
       }
     }
-    .quantity {
-      margin-top: 0.5rem;
-      &::before {
-        content: 'Quantity';
-        display: inline-block;
-        margin-right: 3rem;
-        font-family: $archivo;
-        width: 10px;
-        height: 10px;
-      }
-    }
+
     .woocommerce-product-details__short-description {
-      display: none;
       margin-bottom: 1rem;
     }
     .woocommerce-Price-amount {
@@ -86,7 +75,6 @@
 .product_title, .single-product-container__desc {
     display: none;
 }
-
 
 .single_add_to_cart_button {
     background-color: $green !important;
@@ -187,95 +175,6 @@
 }
 
 
-.woocommerce #reviews #comments h2 {
-    display: none;
-}
-
-.woocommerce #reviews #comments ol.commentlist li {
-    &:nth-child(even) {
-        margin-left: 4rem;
-    }
-}
-
-.woocommerce #reviews #comments ol.commentlist li .comment-text{
-    border: none;
-    &::after {
-        content: '';
-        background-color: rgba($gray, 0.2);
-        width: 100%;
-        height: 1px;
-    }
-}
-
-.woocommerce-review__dash {
-    display: none;
-}
-
-.comment-text {
-    .meta {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.woocommerce #reviews #comments ol.commentlist li img.avatar {
-    border-radius: 50%;
-    width: 50px;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-}
-
-.reviews-title__rating {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba($gray, 0.4);
-}
-
-#review_form {
-    margin: 1.5rem 0;
-    #reply-title {
-        font-family: $archivo;
-        padding-bottom: 0.2rem;
-        border-bottom: 1.5px solid $tan;       
-    }
-    .comment-form-rating {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-top: 1rem;
-        label {
-        font-family: $archivo;
-        margin-bottom: 0.4rem;
-        }
-    }
-    #comment {
-        font-family: $archivo;
-        font-size: 1.1rem;
-    }
-    .form-submit {
-        text-align: center;
-    }
-    #submit{
-        -webkit-appearance:none;
-        background-color: $tan !important;
-        color: $white !important;
-        border: none;
-        font-family: $archivo;
-        margin: 0 auto;
-        padding: 0.8rem 2.5rem !important;
-        &:hover {
-            background-color: $black !important;
-            color: $tan !important;
-            cursor: pointer;
-        }
-    }
-}
-
-.stars a:hover:after, .stars a.active:after {
-    color: #ffb600;
-}
-
 .woocommerce-breadcrumb {
     margin: 0 4rem !important;
     margin-bottom: 1rem !important;
@@ -284,60 +183,6 @@
         margin: 0 1rem !important;
         margin-bottom: 1rem !important;
      }
-}
-
-.single-product-container__reviews-container__reviews {
-    color: $black;
-    &:hover {
-        color: rgba($gray, 0.4);
-    }
-}
-
-.single-product-container__reviews-container__write-review {
-    color: $black;
-    &:hover {
-        color: rgba($gray, 0.4);
-    }
-}
-
-.comment-notes {
-    margin-top: 1rem !important;
-}
-
-.comment-form-author, .comment-form-email{
-    display: flex;
-    flex-direction: column;
-}
-
-.star-rating span:before, .star-rating:before, .woocommerce-page .star-rating:before {
-    color: #f1d554;
-    }
-
-    .woocommerce p.stars a {
-        color: #f1d554;
-    }
-
-#author, #email {
-    padding: 0.4rem;
-}
-.comment-form-author {
-   input[type="text"] {
-        border: 1px solid $black !important;
-    }
-    input[type="email"] {
-        border: 1px solid $black !important;
-    }
-}
-
-.comment-form-email {
-    input[type="email"] {
-        border: 1px solid $black !important;
-    }
-}
-
-.woocommerce #review_form #respond textarea {
-    border: 1px solid $black !important;
-    padding: 0.5rem !important;
 }
 
 .related {
@@ -396,24 +241,24 @@
   margin-top: 2rem;
 }
 
-.select2-search--dropdown {
-  display: none !important;
+.stock, .reset_variations {
+    display: none !important;
 }
 
-select {
-  font-family: $archivo;
+.variations {
+    margin-bottom: 1.5rem;
 }
 
-.read-more-btn {
-  background-color: $tan;
-  color: $white;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.6rem;
-  font-weight: 600;
-  font-family: $archivo;
-  font-size: 1rem;
-  margin-bottom: 1.2rem;
-}
+.cfvsw-label-option {
+    width: 3rem;
+    height: 3rem;
+    font-family: $archivo;
+    font-size: 0.8rem;
+}  
+  .cfvsw-selected-label {
+    display: none;
+  }
+
+  .qib-button-wrapper .quantity input.input-text.qty.text {
+    font-size: 0.8rem !important;
+  }

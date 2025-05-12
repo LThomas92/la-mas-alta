@@ -87,13 +87,6 @@ var gutenbergScrollAnims = false;
 var blockTriggerHeight = $(window).height() * 0.33;
 
 $(document).ready(function () {
-  $('.single-product-container__text-container .price').after($('<button class="read-more-btn">Read More</button>'));
-
-  $('select').select2();
-
-  $('.read-more-btn').click(function () {
-    $('.woocommerce-product-details__short-description').toggle(500);
-  });
 
   $(".single-slick-container").slick({
     dots: false,
