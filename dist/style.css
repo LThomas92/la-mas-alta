@@ -1712,10 +1712,10 @@ button[name="update_cart"] {
   font-family: "Archivo Narrow", sans-serif;
   font-size: 1.1rem !important;
   display: block;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  transition: all 300ms ease-in; }
   .woocommerce a.remove:hover {
     background: none;
-    transition: all 300ms ease-in;
     color: #000 !important; }
 
 .cart_totals {
@@ -1831,6 +1831,16 @@ button[name="update_cart"] {
 
 .woocommerce-checkout-review-order-table .product-name, .woocommerce-checkout-review-order-table .product-total {
   font-family: "Archivo Narrow", sans-serif; }
+
+.woocommerce-checkout-review-order-table .product-name a {
+  color: #000;
+  font-size: 1.1rem;
+  transition: all 300ms ease-in; }
+  .woocommerce-checkout-review-order-table .product-name a:hover {
+    color: #dec9a7; }
+
+.woocommerce-checkout-review-order-table .product-quantity {
+  font-size: 0.9rem; }
 
 .woocommerce-info {
   border-top: 0 !important;
@@ -1954,6 +1964,9 @@ input[type="email"] {
 
 .woocommerce-checkout {
   margin-top: 3.5rem; }
+
+#select2-shipping_country-container, #select2-shipping_state-container {
+  line-height: 10px; }
 
 .woocommerce-account .woocommerce-MyAccount-content {
   float: unset !important;
