@@ -175,8 +175,10 @@
     margin-bottom: 1.2rem;
   }
   &__best-sellers-list-item {
+    margin-right: 1.5rem;
     @media only screen and (max-width: $tablet_max) {
       margin-bottom: 2.5rem;
+      margin-right: 0;
   }
     figure {
       position: relative;
