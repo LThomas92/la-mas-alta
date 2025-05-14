@@ -225,3 +225,21 @@ function redirect_to_profile() {
 }
 add_filter('login_redirect', 'redirect_to_profile');
 
+add_filter('woocommerce_cart_item_name', 'custom_cart_item_name_without_size', 10, 3);
+
+function custom_cart_item_name_without_size($product_name, $cart_item, $cart_item_key) {
+    $product = $cart_item['data'];
+
+    // Get just the base product title
+    $name = $product->get_title();
+
+    // Wrap title in <a> tag with product permalink
+    if ($product && $product->is_visible()) {
+        $name = sprintf('<a href="%s">%s</a>', esc_url(get_permalink($product->get_id())), esc_html($name));
+    } else {
+        // If not visible, just show plain name
+        $name = esc_html($name);
+    }
+
+    return $name;
+}

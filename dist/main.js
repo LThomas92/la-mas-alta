@@ -88,6 +88,10 @@ var blockTriggerHeight = $(window).height() * 0.33;
 
 $(document).ready(function () {
 
+  $('input.qty').on('change', function () {
+    $('button[name="update_cart"]').trigger('click');
+  });
+
   $(".single-slick-container").slick({
     dots: false,
     arrows: false,

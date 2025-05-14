@@ -25,6 +25,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 
 <section class="cart-page-container">
+	
+<div class="cart-page-container__form">
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 	
@@ -73,7 +75,17 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						// Meta data.
 						echo wc_get_formatted_cart_item_data($cart_item);
-            
+
+						// Display Size attribute if set
+						if ( isset( $cart_item['variation'] ) && ! empty( $cart_item['variation'] ) ) {
+							foreach ( $cart_item['variation'] as $attribute => $value ) {
+								if ( strpos( $attribute, 'size' ) !== false ) {
+									$attribute_label = wc_attribute_label( str_replace( 'attribute_', '', $attribute ) );
+									echo '<p class="product-size"><small>' . esc_html( $attribute_label ) . ': ' . esc_html( $value ) . '</small></p>';
+								}
+							}
+						}
+						
 						// Backorder notification.
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
@@ -147,25 +159,25 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</tbody>
 	</table>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
-</form>
-			
 
-<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+		</div>
 
-<div class="cart-collaterals">
+
+
+
+	<div class="cart-collaterals"> <!-- CART collaterals -->
 	<h3 class="cart-collaterals__title">SUMMARY</h3>
 	<p class="cart-collaterals__coupon-title">Do you have a promo code?</p>
-<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
-								<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply', 'woocommerce' ); ?></button>
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-						</div>
-					<?php } ?>
+			<?php if ( wc_coupons_enabled() ) { ?>
+									<div class="coupon">
+											<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply', 'woocommerce' ); ?></button>
+										<?php do_action( 'woocommerce_cart_coupon' ); ?>
+									</div>
+								<?php } ?>
 
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update', 'woocommerce' ); ?>"><?php esc_html_e( 'Update', 'woocommerce' ); ?></button>
+								<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update Cart', 'woocommerce' ); ?></button>
 
-
-	<?php
+				<?php
 		/**
 		 * Cart collaterals hook.
 		 *
@@ -175,7 +187,19 @@ do_action( 'woocommerce_before_cart' ); ?>
 		do_action( 'woocommerce_cart_collaterals' );
 	?>
 
-</div>
+</div> <!-- CART collaterals -->
+
+
+
+
+
+
+
+
+</form>
+			
+
+<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
 </section> <!-- CART PAGE CONTAINER -->
 					</main>
