@@ -920,10 +920,17 @@ button[type="submit"]:hover {
   display: inline-block;
   position: absolute;
   top: 20px; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__featured-link {
+      top: auto;
+      bottom: 20px; } }
 
 .c-homepage__featured-image-list-item {
   margin-right: 0.5rem;
   position: relative; }
+  @media only screen and (max-width: 1024px) {
+    .c-homepage__featured-image-list-item {
+      margin-right: 0; } }
   .c-homepage__featured-image-list-item figure {
     position: relative;
     overflow: hidden; }

@@ -50,10 +50,17 @@
     display: inline-block;
     position: absolute;
     top: 20px;
+    @media only screen and (max-width: $tablet_max) {
+      top: auto;
+      bottom: 20px;
+  }
   }
   &__featured-image-list-item {
     margin-right: 0.5rem;
     position: relative;
+    @media only screen and (max-width: $tablet_max) {
+      margin-right: 0;
+  }
   
     figure {
       position: relative;
