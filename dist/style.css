@@ -1675,6 +1675,16 @@ button[name="update_cart"] {
 
 .cart_totals {
   margin-top: 1.5rem !important; }
+  .cart_totals .cart-subtotal, .cart_totals .order-total {
+    font-family: "Archivo Narrow", sans-serif; }
+
+.woocommerce a.remove {
+  width: 0;
+  height: 0;
+  border-radius: 0 !important; }
+
+.qib-button-wrapper {
+  margin-bottom: 2rem !important; }
 
 .woocommerce-additional-fields {
   display: none; }
