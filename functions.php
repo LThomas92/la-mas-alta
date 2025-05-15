@@ -240,6 +240,5 @@ function custom_cart_item_name_without_size($product_name, $cart_item, $cart_ite
         // If not visible, just show plain name
         $name = esc_html($name);
     }
-
     return $name;
 }

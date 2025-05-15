@@ -11,7 +11,7 @@ ob_start();
  */
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -34,7 +34,7 @@ ob_start();
 
 	<meta property="og:site_name" content="La Mãs Alta">
 	<meta name="twitter:image:alt" content="La Mãs Alta Logo">
-  <meta name="description" content="Get all of your high quality street wear ranging from t-shirts, hoodies & more!
+  <meta name="description" content="Get all of your high quality street wear ranging from t-shirts, hoodies & more!">
 
 	<!--  Non-Essential, But Required for Analytics -->
 	<meta property="fb:app_id" content="your_app_id" />
