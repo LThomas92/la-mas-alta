@@ -103,6 +103,7 @@ endif; ?>
     $newsletterImage = get_field('newsletter_image', 'option');
     $newsletterTitle = get_field('newsletter_title', 'option');
     $newsletterDesc = get_field('newsletter_description', 'option');
+    $newsletterShortCode = get_field('newsletter_shortocde', 'option');
   ?>
   <div class="c-homepage__newsletter-image">
     <img src="<?php echo $newsletterImage['url']; ?>" alt="<?php echo $newsletterImage['alt']; ?>">
@@ -111,7 +112,7 @@ endif; ?>
     <h4 class="c-homepage__newsletter-title"><?php echo $newsletterTitle; ?></h4>
     <p class="c-homepage__newsletter-desc"><?php echo $newsletterDesc; ?></p>
     <div class="c-homepage__newsletter-form">
-      <?php echo do_shortcode('[mc4wp_form id=291]'); ?>
+      <?php echo $newsletterShortCode; ?>
     </div>
 
   </div>
