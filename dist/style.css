@@ -1270,7 +1270,7 @@ button[type="submit"]:hover {
 .price {
   color: #4e4e4e;
   font-weight: 600;
-  margin: 0.5rem 0;
+  margin: 1.5rem 0;
   font-size: 1.5rem; }
   @media only screen and (max-width: 800px) {
     .price {
@@ -1430,6 +1430,21 @@ button[type="submit"]:hover {
 
 .qib-button-wrapper .quantity input.input-text.qty.text {
   font-size: 0.8rem !important; }
+
+.qib-button-wrapper {
+  margin-bottom: 1rem !important; }
+
+.woocommerce-variation-price {
+  margin-bottom: 1.5rem; }
+
+div[swatches-attr="attribute_colors"] {
+  margin-bottom: 1rem; }
+
+label[for="colors"] {
+  padding-bottom: 1rem; }
+
+.product_meta {
+  margin: 1rem 0; }
 
 .category-product-header {
   background-size: cover;
